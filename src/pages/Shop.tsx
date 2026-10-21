@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Header from '../components/auth/Header';
 import ShopBanner from '../components/Shop/ShopBanner';
 import ShopSidebar from '../components/Shop/ShopSidebar';
@@ -10,17 +10,66 @@ import { allProducts } from '../components/Shop/productsData';
 import type { SortOption } from '../components/Shop/types';
 
 interface ShopProps {
-  onNavigate: (page: 'home' | 'shop') => void;
+  onNavigate: (page: any, category?: string | null) => void;
   onSelectProduct?: (productId: string) => void;
+  initialCategory?: string | null;
+  onCategoryChange?: (category: string | null) => void;
 }
 
-const Shop: React.FC<ShopProps> = ({ onNavigate, onSelectProduct }) => {
+const Shop: React.FC<ShopProps> = ({ 
+  onNavigate, 
+  onSelectProduct, 
+  initialCategory,
+  onCategoryChange 
+}) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  
+  // Resolve category from initial prop or current URL hash
+  const getCategoryFromHash = (): string | null => {
+    if (initialCategory) return initialCategory;
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('enterprise')) return 'Enterprise Printer';
+      if (hash.includes('scanner')) return 'Scanners';
+      if (hash.includes('small') || hash.includes('medium') || hash.includes('office')) return 'Small and Medium Office';
+    }
+    return null;
+  };
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(getCategoryFromHash);
   const [priceRange, setPriceRange] = useState<[number, number]>([50, 1710]);
   const [sortOption, setSortOption] = useState<SortOption>('default');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+
+  // React to initialCategory prop changes from parent router
+  useEffect(() => {
+    if (initialCategory !== undefined) {
+      setSelectedCategory(initialCategory);
+      setCurrentPage(1);
+    }
+  }, [initialCategory]);
+
+  // Listen to hash changes in case user navigates back/forward or clicks direct links
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.startsWith('#shop') || hash.includes('shop')) {
+        let matchedCat: string | null = null;
+        if (hash.includes('enterprise')) {
+          matchedCat = 'Enterprise Printer';
+        } else if (hash.includes('scanner')) {
+          matchedCat = 'Scanners';
+        } else if (hash.includes('small') || hash.includes('medium') || hash.includes('office')) {
+          matchedCat = 'Small and Medium Office';
+        }
+        setSelectedCategory(matchedCat);
+        setCurrentPage(1);
+      }
+    };
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   // Category counts
   const categoryCounts = useMemo(() => {
@@ -81,7 +130,18 @@ const Shop: React.FC<ShopProps> = ({ onNavigate, onSelectProduct }) => {
 
   const handleCategorySelect = (category: string | null) => {
     setSelectedCategory(category);
+    onCategoryChange?.(category);
     setCurrentPage(1);
+
+    if (category === 'Enterprise Printer') {
+      window.location.hash = '#shop/enterprise';
+    } else if (category === 'Scanners') {
+      window.location.hash = '#shop/scanners';
+    } else if (category === 'Small and Medium Office') {
+      window.location.hash = '#shop/small-medium';
+    } else {
+      window.location.hash = '#shop';
+    }
   };
 
   const handleSearchChange = (query: string) => {
@@ -116,7 +176,12 @@ const Shop: React.FC<ShopProps> = ({ onNavigate, onSelectProduct }) => {
 
           {/* Right Column: Hero Banner, Products Grid & Pagination */}
           <div className="flex-1 w-full min-w-0">
-            <ShopBanner onNavigate={onNavigate} />
+            <ShopBanner 
+              onNavigate={onNavigate} 
+              selectedCategory={selectedCategory}
+              onClearCategory={() => handleCategorySelect(null)}
+              totalResults={totalResults}
+            />
 
             <ProductGrid
               products={paginatedProducts}
@@ -141,7 +206,7 @@ const Shop: React.FC<ShopProps> = ({ onNavigate, onSelectProduct }) => {
       <FloatingCart />
 
       {/* 4. FOOTER */}
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 };

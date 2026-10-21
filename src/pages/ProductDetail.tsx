@@ -10,7 +10,7 @@ import { getProductDetailById, getRelatedProducts } from '../components/ProductD
 
 interface ProductDetailProps {
   productId: string;
-  onNavigate: (page: 'home' | 'shop') => void;
+  onNavigate: (page: 'home' | 'shop' | 'about' | 'contact') => void;
   onSelectProduct: (productId: string) => void;
 }
 
@@ -81,6 +81,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
 
         {/* 4. TABS & SPECIFICATIONS TABLE */}
         <ProductSpecsTable
+          productId={product.id}
           specifications={product.specifications}
           productTitle={product.title}
         />

@@ -57,23 +57,36 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
 
   return (
     <>
-      <section className="relative h-[650px] flex items-center bg-[url('/hero-bg.jpg')] bg-cover bg-center">
-        {/* Solid blue/grey translucent overlay matching the reference image */}
-        <div className="absolute inset-0 bg-[#28465c]/60 mix-blend-normal"></div>
+      <section className="relative min-h-[660px] flex items-center bg-[url('/hero-bg.jpg')] bg-cover bg-center overflow-hidden">
+        {/* Modern dark gradient overlay with depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1d2d]/90 via-[#172c42]/75 to-[#1c3852]/60 mix-blend-normal"></div>
 
-        <div className="relative z-10 text-white max-w-[1200px] mx-auto w-full mt-16 px-5 md:px-0">
-          <h1 className="text-[42px] sm:text-[50px] md:text-[65px] font-bold leading-[1.1] mb-6 tracking-tight">
+        {/* Ambient radial glow */}
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 text-white max-w-[1200px] mx-auto w-full pt-28 sm:pt-32 md:pt-28 pb-12 sm:pb-16 px-5 md:px-8">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-white/10 text-sky-200 border border-white/20 backdrop-blur-md mb-6 shadow-xs max-w-full">
+            <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse shrink-0" />
+            <span className="truncate">Trusted Printer Hardware, Setup &amp; Support</span>
+          </div>
+
+          <h1 className="text-[38px] sm:text-[48px] md:text-[62px] font-black leading-[1.12] mb-5 tracking-tight">
             Printing Made Simple.<br />
-            Reliable. Efficient.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-200 to-white">
+              Reliable. Efficient.
+            </span>
           </h1>
-          <p className="text-[15px] md:text-[17px] mb-10 leading-relaxed max-w-[650px] text-blue-200">
+
+          <p className="text-[15px] sm:text-[16px] md:text-[17px] mb-8 leading-relaxed max-w-[620px] text-slate-200">
             Discover reliable printers, professional printing solutions, and expert assistance designed for homes, offices, and businesses.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+
+          <div className="flex flex-col sm:flex-row gap-3.5 w-full sm:w-auto mb-12">
             <button
               type="button"
               onClick={() => onNavigate?.('shop')}
-              className="inline-block w-full sm:w-auto text-center py-3.5 px-8 rounded-xl font-bold text-[15px] uppercase tracking-wide transition-all duration-300 bg-[#12213d] text-white hover:bg-[#1a2f55] border-none cursor-pointer shadow-md hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-center py-3.5 px-8 rounded-xl font-bold text-[14px] uppercase tracking-wider transition-all duration-300 bg-[#0284c7] text-white hover:bg-[#0369a1] border-none cursor-pointer shadow-lg shadow-sky-600/30 hover:scale-[1.02]"
             >
               EXPLORE PRINTERS
             </button>
@@ -81,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
               id="hero-printer-setup-btn"
               type="button"
               onClick={() => setIsBrandModalOpen(true)}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-center py-3.5 px-8 rounded-xl font-bold text-[15px] uppercase tracking-wide transition-all duration-300 bg-lightBlue text-white hover:bg-primary-hover border-none cursor-pointer shadow-md hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-center py-3.5 px-8 rounded-xl font-bold text-[14px] uppercase tracking-wider transition-all duration-300 bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md cursor-pointer shadow-sm hover:scale-[1.02]"
             >
               <span>PRINTER SETUP</span>
               <svg
@@ -96,6 +109,22 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
                 <polyline points="9 18 15 12 9 6"></polyline>
               </svg>
             </button>
+          </div>
+
+          {/* Quick Stats Strip */}
+          <div className="pt-6 border-t border-white/15 flex flex-wrap items-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-300">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+              <span>4 Major Brands Supported</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+              <span>Fast Ground Dispatch</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+              <span>Expert Setup Support</span>
+            </div>
           </div>
         </div>
       </section>

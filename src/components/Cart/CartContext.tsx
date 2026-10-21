@@ -21,6 +21,7 @@ interface CartContextType {
   addToCart: (product: { id: string; title: string; price: number; image: string }, quantity?: number) => void;
   updateQuantity: (id: string, delta: number) => void;
   removeFromCart: (id: string) => void;
+  clearCart: () => void;
   appliedCoupon: Coupon | null;
   applyCoupon: (code: string) => { success: boolean; message: string };
   removeCoupon: () => void;
@@ -74,10 +75,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   const [isOpen, setIsOpen] = useState(false);
-  const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>({
-    code: 'cart10',
-    discountAmount: 10.0,
-  });
+  const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>(null);
 
   // Sync to localStorage
   useEffect(() => {
@@ -149,19 +147,18 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  /**
-   * Apply coupon code.
-   * Future API integration point:
-   * await fetch('/api/cart/coupon', { method: 'POST', body: JSON.stringify({ code }) })
-   */
-  const applyCoupon = (code: string): { success: boolean; message: string } => {
-    const cleanCode = code.trim().toLowerCase();
-    if (cleanCode === 'cart10' || cleanCode === 'cart100') {
-      const discountVal = cleanCode === 'cart100' ? 100 : 10;
-      setAppliedCoupon({ code: cleanCode, discountAmount: discountVal });
-      return { success: true, message: `Coupon "${cleanCode}" applied successfully!` };
+  const clearCart = () => {
+    setItems([]);
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('webplanets_cart');
     }
-    return { success: false, message: 'Invalid coupon code. Try "cart10" or "cart100"' };
+  };
+
+  /**
+   * Apply coupon code (disabled - no coupons accepted).
+   */
+  const applyCoupon = (_code: string): { success: boolean; message: string } => {
+    return { success: false, message: 'Coupons are currently disabled.' };
   };
 
   const removeCoupon = () => {
@@ -170,8 +167,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Calculations
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const discount = appliedCoupon ? Math.min(appliedCoupon.discountAmount, subtotal) : 0;
-  const total = Math.max(0, subtotal - discount);
+  const discount = 0;
+  const total = subtotal;
   const totalCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
@@ -184,6 +181,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         addToCart,
         updateQuantity,
         removeFromCart,
+        clearCart,
         appliedCoupon,
         applyCoupon,
         removeCoupon,

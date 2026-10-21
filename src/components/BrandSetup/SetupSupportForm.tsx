@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { AlertCircle } from 'lucide-react';
+import { sendEmail } from '../../services/emailService';
 
 interface SetupSupportFormProps {
   brandName: string;
@@ -12,17 +14,32 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!contactForm.name || !contactForm.email) return;
 
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+    setErrorMessage(null);
+
+    const result = await sendEmail({
+      name: contactForm.name,
+      email: contactForm.email,
+      subject: `${brandName} Printer Setup Support Request`,
+      message: contactForm.message || `Customer requested setup support for ${brandName} printer`,
+      from_name: `Pixfix Setup Support (${brandName})`,
+      brand: brandName,
+    });
+
+    setSubmitting(false);
+
+    if (result.success) {
       setFormSubmitted(true);
       setContactForm({ name: '', email: '', message: '' });
-    }, 700);
+    } else {
+      setErrorMessage(result.message || 'Failed to send message. Please try again.');
+    }
   };
 
   return (
@@ -41,7 +58,10 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
           </p>
           <button
             type="button"
-            onClick={() => setFormSubmitted(false)}
+            onClick={() => {
+              setFormSubmitted(false);
+              setErrorMessage(null);
+            }}
             className="mt-4 px-4 py-1.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-[13px] font-semibold border-none cursor-pointer"
           >
             Send Another Message
@@ -49,6 +69,25 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
         </div>
       ) : (
         <form onSubmit={handleContactSubmit} className="space-y-4">
+          {errorMessage && (
+            <div className="flex items-start gap-2.5 p-3.5 bg-red-50 border border-red-200 text-red-700 rounded-lg text-[13px]">
+              <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-500" />
+              <div className="flex-1">
+                <p className="font-semibold">Unable to send message</p>
+                <p className="text-red-600 text-xs mt-0.5">{errorMessage}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Anti-spam honeypot */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: 'none' }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
           {/* Name field */}
           <div>
             <label htmlFor="setup-name" className="block text-[13.5px] text-gray-700 font-medium mb-1.5">

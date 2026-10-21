@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none" width="280" height="64">
+  <defs>
+    <linearGradient id="pfg-white-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="pfg-white-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+    <filter id="pfg-white-shadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0284c7" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Modern Icon Symbol -->
+  <g transform="translate(6, 8)" filter="url(#pfg-white-shadow)">
+    <!-- Base Rounded Badge -->
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#pfg-white-blue)" />
+    
+    <!-- 4 Digital Printing Pixels arranged in an isometric / dynamic pattern -->
+    <rect x="11" y="11" width="11" height="11" rx="3" fill="#ffffff" />
+    <rect x="25" y="11" width="11" height="11" rx="3" fill="url(#pfg-white-cyan)" />
+    <rect x="11" y="25" width="11" height="11" rx="3" fill="#ffffff" fill-opacity="0.9" />
+    <rect x="25" y="25" width="11" height="11" rx="3" fill="#38bdf8" />
+
+    <!-- Technical Fix Notch / Accent Spark -->
+    <circle cx="39" cy="8" r="3.5" fill="#38bdf8" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(68, 12)">
+    <!-- Main Text: PIXFIX -->
+    <text x="0" y="28" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" letter-spacing="-0.5" fill="#ffffff">
+      PIX<tspan fill="#38bdf8">FIX</tspan>
+    </text>
+    
+    <!-- Subtitle: DIGITAL -->
+    <text x="1" y="44" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" letter-spacing="3.5" fill="#bae6fd">
+      DIGITAL
+    </text>
+  </g>
+</svg>

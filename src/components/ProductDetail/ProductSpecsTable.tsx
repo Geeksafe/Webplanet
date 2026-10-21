@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
 import type { ProductSpecification } from './types';
+import ProductReviews from './ProductReviews';
 
 interface ProductSpecsTableProps {
+  productId?: string;
   specifications: ProductSpecification[];
   productTitle: string;
 }
 
-const ProductSpecsTable: React.FC<ProductSpecsTableProps> = ({ specifications, productTitle }) => {
+const ProductSpecsTable: React.FC<ProductSpecsTableProps> = ({
+  productId,
+  specifications,
+  productTitle,
+}) => {
   const [activeTab, setActiveTab] = useState<'description' | 'reviews'>('description');
+
+  const [reviewCount, setReviewCount] = useState<number>(() => {
+    try {
+      const storageKey = `webplanets_reviews_${productId || productTitle.replace(/\s+/g, '_')}`;
+      const saved = localStorage.getItem(storageKey);
+      return saved ? JSON.parse(saved).length : 0;
+    } catch {
+      return 0;
+    }
+  });
 
   return (
     <div className="w-full mt-14 border-t border-gray-200 pt-8">
@@ -34,7 +50,7 @@ const ProductSpecsTable: React.FC<ProductSpecsTableProps> = ({ specifications, p
               : 'text-gray-400 hover:text-gray-600'
           }`}
         >
-          Reviews (0)
+          Reviews ({reviewCount})
         </button>
       </div>
 
@@ -73,10 +89,11 @@ const ProductSpecsTable: React.FC<ProductSpecsTableProps> = ({ specifications, p
           </table>
         </div>
       ) : (
-        <div className="bg-white rounded border border-gray-200 p-8 text-center text-gray-500 text-sm">
-          <p className="mb-2">There are no reviews yet for "{productTitle}".</p>
-          <p className="text-xs text-gray-400">Be the first to review this product!</p>
-        </div>
+        <ProductReviews
+          productId={productId}
+          productTitle={productTitle}
+          onReviewCountChange={setReviewCount}
+        />
       )}
     </div>
   );

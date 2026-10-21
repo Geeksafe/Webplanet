@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { AlertCircle, Loader2 } from 'lucide-react';
+import { sendEmail } from '../../services/emailService';
 
 export interface DriverFormData {
   firstName: string;
@@ -28,6 +30,8 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
     phone: '',
     modelNumber: defaultModel,
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (defaultModel) {
@@ -37,9 +41,30 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+    if (!formData.firstName || !formData.email || !formData.phone || !formData.modelNumber) return;
+
+    setSubmitting(true);
+    setErrorMessage(null);
+
+    const result = await sendEmail({
+      name: `${formData.firstName} ${formData.lastName}`.trim(),
+      email: formData.email,
+      phone: formData.phone,
+      subject: `Driver Download Request: ${formData.modelNumber}`,
+      message: `Customer requested driver download for printer model: ${formData.modelNumber}. Phone: ${formData.phone}`,
+      from_name: 'Pixfix Driver Download Portal',
+      modelNumber: formData.modelNumber,
+    });
+
+    setSubmitting(false);
+
+    if (result.success) {
+      onSubmit(formData);
+    } else {
+      setErrorMessage(result.message || 'Failed to submit. Please try again.');
+    }
   };
 
   return (
@@ -69,6 +94,26 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
 
         {/* Modal Body Form */}
         <form onSubmit={handleSubmit} className="px-6 sm:px-8 pb-8 pt-4 space-y-5 text-left">
+          {errorMessage && (
+            <div className="flex items-start gap-2.5 p-3.5 bg-red-50 border border-red-200 text-red-700 rounded-lg text-[13px]">
+              <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-500" />
+              <div className="flex-1">
+                <p className="font-semibold">Unable to submit form</p>
+                <p className="text-red-600 text-xs mt-0.5">{errorMessage}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Anti-spam honeypot */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: 'none' }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
           {/* Name Field (First, Last) */}
           <div>
             <label className="block text-[14px] font-medium text-gray-800 mb-1.5">
@@ -145,9 +190,17 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
           <div className="pt-2">
             <button
               type="submit"
-              className="px-7 py-2.5 bg-[#0084d6] hover:bg-[#0071be] text-white font-bold text-[14px] uppercase tracking-wider rounded cursor-pointer transition-colors shadow-sm border-none"
+              disabled={submitting}
+              className="inline-flex items-center justify-center gap-2 px-7 py-2.5 bg-[#0084d6] hover:bg-[#0071be] text-white font-bold text-[14px] uppercase tracking-wider rounded cursor-pointer transition-colors shadow-sm border-none disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              SUBMIT
+              {submitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>SUBMITTING...</span>
+                </>
+              ) : (
+                'SUBMIT'
+              )}
             </button>
           </div>
         </form>

@@ -5,7 +5,7 @@ const FloatingCart: React.FC = () => {
   const { totalCount, openCart } = useCart();
 
   return (
-    <div className="fixed right-6 top-8/9 z-40 flex flex-col items-center gap-3">
+    <div className="fixed right-5 sm:right-6 bottom-24 sm:bottom-28 z-40 flex flex-col items-center gap-3">
       {/* Floating Cart Button */}
       <button 
         type="button"
