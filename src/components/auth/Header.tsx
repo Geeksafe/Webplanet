@@ -51,8 +51,25 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
         />
 
         {/* DESKTOP NAV (Hidden on mobile) */}
-        <nav className="hidden md:flex items-center gap-7 lg:gap-9">
-          <ul className="flex items-center list-none gap-6 lg:gap-8 m-0 p-0">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          <ul className="flex items-center list-none gap-5 lg:gap-7 m-0 p-0">
+            <li>
+              <a
+                href="tel:1-833-785-8085"
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[13px] lg:text-[14px] font-semibold transition-all no-underline ${
+                  isHome
+                    ? 'bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40'
+                    : 'bg-sky-50 hover:bg-sky-100 text-[#0284c7] border border-sky-200 hover:border-sky-300'
+                }`}
+                title="Call Toll Free: 1-833-785-8085"
+              >
+                <PhoneCall className={`w-3.5 h-3.5 ${isHome ? 'text-sky-300' : 'text-[#0284c7]'}`} />
+                <span>
+                  <span className="font-medium opacity-90 text-[12px] lg:text-[12.5px] uppercase tracking-wider">Toll Free:</span>{' '}
+                  <span className="font-bold tracking-tight">1-833-785-8085</span>
+                </span>
+              </a>
+            </li>
             <li>
               <button 
                 onClick={() => handleNav('home')}
@@ -97,8 +114,20 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
           </button> */}
         </nav>
 
-        {/* MOBILE HAMBURGER BUTTON (Visible only on mobile screens < 768px) */}
-        <div className="flex md:hidden items-center gap-2.5">
+        {/* MOBILE ACTIONS (Visible only on mobile screens < 768px) */}
+        <div className="flex md:hidden items-center gap-2">
+          <a
+            href="tel:1-833-785-8085"
+            aria-label="Call Toll Free 1-833-785-8085"
+            title="Call Toll Free: 1-833-785-8085"
+            className={`p-2 rounded-xl transition-all duration-200 cursor-pointer border flex items-center justify-center no-underline ${
+              isHome
+                ? 'bg-white/10 hover:bg-white/20 text-white border-white/20'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+            }`}
+          >
+            <PhoneCall className={`w-5 h-5 ${isHome ? 'text-sky-300' : 'text-[#0284c7]'}`} />
+          </a>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
@@ -127,6 +156,22 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
           }`}
         >
           <div className="px-5 py-6 flex flex-col gap-2">
+            {/* Toll Free support for mobile */}
+            <a
+              href="tel:1-833-785-8085"
+              className={`flex items-center justify-between w-full py-3 px-4 rounded-xl text-sm font-semibold transition-colors no-underline mb-1 ${
+                isHome
+                  ? 'bg-sky-500/15 text-sky-300 hover:bg-sky-500/25 border border-sky-400/20'
+                  : 'bg-sky-50 text-[#0284c7] hover:bg-sky-100 border border-sky-200/60'
+              }`}
+            >
+              <div className="flex items-center gap-2.5">
+                <PhoneCall className="w-4 h-4 text-[#0284c7]" />
+                <span>Toll Free Support</span>
+              </div>
+              <span className="font-bold tracking-tight">1-833-785-8085</span>
+            </a>
+
             <button
               onClick={() => handleNav('home')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${

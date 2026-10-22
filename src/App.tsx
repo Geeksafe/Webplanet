@@ -147,6 +147,15 @@ const App: React.FC = () => {
       if (parsed.page === 'shop') {
         setShopCategory(parsed.category || null);
       }
+
+      // Track virtual pageview in TrafficGuard for Single Page App transitions
+      if (typeof window !== 'undefined' && (window as any).dataTrafficGuard) {
+        (window as any).dataTrafficGuard.push([
+          'event',
+          'pageview',
+          JSON.stringify({ evs: 'spa', path: window.location.hash || '#home' })
+        ]);
+      }
     };
 
     window.addEventListener('hashchange', handleHashChange);
