@@ -1,37 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import type { BrandId } from '../BrandSetup';
+import BrandSetupCard from './BrandSetupCard';
 
 interface HeroProps {
   onNavigate?: (page: 'home' | 'shop') => void;
   onSelectBrand?: (brand: BrandId) => void;
 }
-
-const brands: { id: BrandId; name: string; imageUrl: string; title: string }[] = [
-  {
-    id: 'hp',
-    name: 'HP',
-    imageUrl: '/setup/brand_card_hp.png',
-    title: 'HP Printer',
-  },
-  {
-    id: 'canon',
-    name: 'Canon',
-    imageUrl: '/setup/brand_card_canon.png',
-    title: 'Canon Printer',
-  },
-  {
-    id: 'brother',
-    name: 'brother',
-    imageUrl: '/setup/brand_card_brother.png',
-    title: 'Brother Printer',
-  },
-  {
-    id: 'epson',
-    name: 'EPSON',
-    imageUrl: '/setup/brand_card_epson.png',
-    title: 'Epson Printer',
-  },
-];
 
 const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
   const [isBrandModalOpen, setIsBrandModalOpen] = useState(false);
@@ -66,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
 
         <div className="relative z-10 text-white max-w-[1200px] mx-auto w-full pt-28 sm:pt-32 md:pt-28 pb-12 sm:pb-16 px-5 md:px-8">
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-white/10 text-sky-200 border border-white/20 backdrop-blur-md mb-6 shadow-xs max-w-full">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold text-sky-200 backdrop-blur-md mb-6 shadow-xs max-w-full">
             <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse shrink-0" />
             <span className="truncate">Trusted Printer Hardware, Setup &amp; Support</span>
           </div>
@@ -129,6 +103,15 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
         </div>
       </section>
 
+      {/* Brand Selection Section (Below Hero & Above BrandSelection / Featured Products) */}
+      <section className="bg-slate-50/80 py-12 sm:py-16 border-b border-slate-200/80" id="select-printer-brand">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 border border-slate-100">
+            <BrandSetupCard onSelectBrand={handleSelect} prefixId="hero-inline-brand" />
+          </div>
+        </div>
+      </section>
+
       {/* Brand Selection Modal */}
       {isBrandModalOpen && (
         <div
@@ -152,44 +135,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
               </svg>
             </button>
 
-            {/* Header */}
-            <div className="text-center mb-7">
-              <span className="text-[12px] font-bold tracking-widest text-lightBlue uppercase">
-                Printer Setup & Drivers
-              </span>
-              <h2 className="text-[22px] sm:text-[26px] font-extrabold text-[#0a1c3d] uppercase mt-1 mb-2">
-                Select Your Printer Brand
-              </h2>
-              <p className="text-[13.5px] text-gray-500 max-w-md mx-auto">
-                Select your printer brand below to proceed with model configuration and driver setup.
-              </p>
-            </div>
-
-            {/* Brands Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {brands.map((brand) => (
-                <div
-                  key={brand.id}
-                  id={`hero-modal-brand-${brand.id}`}
-                  onClick={() => handleSelect(brand.id)}
-                  className="group relative flex flex-col items-center justify-between p-5 rounded-2xl border border-slate-100 hover:border-sky-300 bg-white hover:bg-sky-50/40 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer text-center"
-                >
-                  <div className="h-20 sm:h-24 w-full flex items-center justify-center mb-3">
-                    <img
-                      src={brand.imageUrl}
-                      alt={`${brand.name} logo`}
-                      className="max-h-full max-w-[120px] object-contain group-hover:scale-110 transition-transform duration-300 select-none"
-                    />
-                  </div>
-                  <span className="text-[14px] font-bold text-gray-800 group-hover:text-lightBlue transition-colors mb-2.5">
-                    {brand.title}
-                  </span>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-lightBlue bg-sky-100 group-hover:bg-lightBlue group-hover:text-white py-1.5 px-3 rounded-lg transition-colors w-full">
-                    Setup
-                  </span>
-                </div>
-              ))}
-            </div>
+            <BrandSetupCard onSelectBrand={handleSelect} prefixId="hero-modal-brand" />
           </div>
         </div>
       )}

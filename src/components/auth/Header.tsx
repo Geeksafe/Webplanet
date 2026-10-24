@@ -11,7 +11,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHome = currentPage === 'home';
-  const textColor = isHome ? 'text-white' : 'text-gray-800';
+  const textColor = 'text-slate-700';
 
   // Close mobile menu on escape key or resize
   useEffect(() => {
@@ -37,16 +37,13 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
 
   return (
     <header
-      className={`w-full z-30 transition-colors ${
-        isHome
-          ? 'absolute top-0 left-0 bg-black/25 backdrop-blur-sm border-b border-white/10'
-          : 'relative bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-2xs'
+      className={`w-full z-30 transition-colors bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs ${
+        isHome ? 'absolute top-0 left-0' : 'relative'
       }`}
     >
       <div className="w-full px-4 sm:px-6 md:px-8 flex justify-between items-center h-18 sm:h-20">
         {/* LOGO */}
         <Logo
-          isDark={isHome}
           onClick={() => handleNav('home')}
         />
 
@@ -56,14 +53,10 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
             <li>
               <a
                 href="tel:1-833-785-8085"
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[13px] lg:text-[14px] font-semibold transition-all no-underline ${
-                  isHome
-                    ? 'bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40'
-                    : 'bg-sky-50 hover:bg-sky-100 text-[#0284c7] border border-sky-200 hover:border-sky-300'
-                }`}
+                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[13px] lg:text-[14px] font-semibold transition-all no-underline bg-sky-50 hover:bg-sky-100 text-[#0284c7] border border-sky-200 hover:border-sky-300 shadow-2xs"
                 title="Call Toll Free: 1-833-785-8085"
               >
-                <PhoneCall className={`w-3.5 h-3.5 ${isHome ? 'text-sky-300' : 'text-[#0284c7]'}`} />
+                <PhoneCall className="w-3.5 h-3.5 text-[#0284c7]" />
                 <span>
                   <span className="font-medium opacity-90 text-[12px] lg:text-[12.5px] uppercase tracking-wider">Toll Free:</span>{' '}
                   <span className="font-bold tracking-tight">1-833-785-8085</span>
@@ -103,15 +96,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               </button>
             </li>
           </ul>
-
-          {/* Direct CTA button for desktop */}
-          {/* <button
-            onClick={() => handleNav('shop')}
-            className="hidden lg:inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider bg-[#0284c7] hover:bg-[#0369a1] text-white px-4 py-2.5 rounded-lg transition-colors cursor-pointer border-none shadow-sm"
-          >
-            <ShoppingBag className="w-3.5 h-3.5" />
-            <span>Store</span>
-          </button> */}
         </nav>
 
         {/* MOBILE ACTIONS (Visible only on mobile screens < 768px) */}
@@ -120,27 +104,19 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
             href="tel:1-833-785-8085"
             aria-label="Call Toll Free 1-833-785-8085"
             title="Call Toll Free: 1-833-785-8085"
-            className={`p-2 rounded-xl transition-all duration-200 cursor-pointer border flex items-center justify-center no-underline ${
-              isHome
-                ? 'bg-white/10 hover:bg-white/20 text-white border-white/20'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
-            }`}
+            className="p-2.5 rounded-xl transition-all duration-200 cursor-pointer border flex items-center justify-center no-underline bg-sky-50 hover:bg-sky-100 text-[#0284c7] border-sky-200 shadow-2xs"
           >
-            <PhoneCall className={`w-5 h-5 ${isHome ? 'text-sky-300' : 'text-[#0284c7]'}`} />
+            <PhoneCall className="w-5 h-5 text-[#0284c7]" />
           </a>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
-            className={`p-2 rounded-xl transition-all duration-200 cursor-pointer border ${
-              isHome
-                ? 'bg-white/10 hover:bg-white/20 text-white border-white/20'
-                : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
-            }`}
+            className="p-2.5 rounded-xl transition-all duration-200 cursor-pointer border bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200 shadow-2xs"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 stroke-[2.2]" />
+              <X className="w-5 h-5 stroke-[2.2]" />
             ) : (
-              <Menu className="w-6 h-6 stroke-[2.2]" />
+              <Menu className="w-5 h-5 stroke-[2.2]" />
             )}
           </button>
         </div>
@@ -148,22 +124,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
 
       {/* MOBILE DROPDOWN MENU */}
       {isMobileMenuOpen && (
-        <div 
-          className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 shadow-2xl border-b z-50 ${
-            isHome 
-              ? 'bg-[#0f1d2d]/98 backdrop-blur-xl border-white/10 text-white' 
-              : 'bg-white/98 backdrop-blur-xl border-slate-200 text-slate-900'
-          }`}
-        >
+        <div className="md:hidden absolute top-full left-0 w-full transition-all duration-300 shadow-2xl border-b z-50 bg-white border-slate-200 text-slate-900">
           <div className="px-5 py-6 flex flex-col gap-2">
             {/* Toll Free support for mobile */}
             <a
               href="tel:1-833-785-8085"
-              className={`flex items-center justify-between w-full py-3 px-4 rounded-xl text-sm font-semibold transition-colors no-underline mb-1 ${
-                isHome
-                  ? 'bg-sky-500/15 text-sky-300 hover:bg-sky-500/25 border border-sky-400/20'
-                  : 'bg-sky-50 text-[#0284c7] hover:bg-sky-100 border border-sky-200/60'
-              }`}
+              className="flex items-center justify-between w-full py-3 px-4 rounded-xl text-sm font-semibold transition-colors no-underline mb-1 bg-sky-50 text-[#0284c7] hover:bg-sky-100 border border-sky-200/60"
             >
               <div className="flex items-center gap-2.5">
                 <PhoneCall className="w-4 h-4 text-[#0284c7]" />
@@ -176,8 +142,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               onClick={() => handleNav('home')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${
                 currentPage === 'home'
-                  ? 'bg-sky-500/15 text-[#0284c7] font-bold'
-                  : isHome ? 'text-slate-200 hover:bg-white/10 bg-transparent' : 'text-slate-700 hover:bg-slate-100 bg-transparent'
+                  ? 'bg-sky-50 text-[#0284c7] font-bold'
+                  : 'text-slate-700 hover:bg-slate-100 bg-transparent'
               }`}
             >
               <Home className="w-4 h-4 text-[#0284c7]" />
@@ -188,8 +154,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               onClick={() => handleNav('about')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${
                 currentPage === 'about'
-                  ? 'bg-sky-500/15 text-[#0284c7] font-bold'
-                  : isHome ? 'text-slate-200 hover:bg-white/10 bg-transparent' : 'text-slate-700 hover:bg-slate-100 bg-transparent'
+                  ? 'bg-sky-50 text-[#0284c7] font-bold'
+                  : 'text-slate-700 hover:bg-slate-100 bg-transparent'
               }`}
             >
               <Info className="w-4 h-4 text-[#0284c7]" />
@@ -200,8 +166,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               onClick={() => handleNav('shop')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${
                 currentPage === 'shop'
-                  ? 'bg-sky-500/15 text-[#0284c7] font-bold'
-                  : isHome ? 'text-slate-200 hover:bg-white/10 bg-transparent' : 'text-slate-700 hover:bg-slate-100 bg-transparent'
+                  ? 'bg-sky-50 text-[#0284c7] font-bold'
+                  : 'text-slate-700 hover:bg-slate-100 bg-transparent'
               }`}
             >
               <ShoppingBag className="w-4 h-4 text-[#0284c7]" />
@@ -212,8 +178,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               onClick={() => handleNav('services')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${
                 currentPage === 'services'
-                  ? 'bg-sky-500/15 text-[#0284c7] font-bold'
-                  : isHome ? 'text-slate-200 hover:bg-white/10 bg-transparent' : 'text-slate-700 hover:bg-slate-100 bg-transparent'
+                  ? 'bg-sky-50 text-[#0284c7] font-bold'
+                  : 'text-slate-700 hover:bg-slate-100 bg-transparent'
               }`}
             >
               <Wrench className="w-4 h-4 text-[#0284c7]" />
@@ -224,8 +190,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               onClick={() => handleNav('faq')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${
                 currentPage === 'faq'
-                  ? 'bg-sky-500/15 text-[#0284c7] font-bold'
-                  : isHome ? 'text-slate-200 hover:bg-white/10 bg-transparent' : 'text-slate-700 hover:bg-slate-100 bg-transparent'
+                  ? 'bg-sky-50 text-[#0284c7] font-bold'
+                  : 'text-slate-700 hover:bg-slate-100 bg-transparent'
               }`}
             >
               <HelpCircle className="w-4 h-4 text-[#0284c7]" />
@@ -236,8 +202,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               onClick={() => handleNav('contact')}
               className={`flex items-center gap-3 w-full text-left py-3 px-4 rounded-xl text-sm font-semibold transition-colors cursor-pointer border-none ${
                 currentPage === 'contact'
-                  ? 'bg-sky-500/15 text-[#0284c7] font-bold'
-                  : isHome ? 'text-slate-200 hover:bg-white/10 bg-transparent' : 'text-slate-700 hover:bg-slate-100 bg-transparent'
+                  ? 'bg-sky-50 text-[#0284c7] font-bold'
+                  : 'text-slate-700 hover:bg-slate-100 bg-transparent'
               }`}
             >
               <PhoneCall className="w-4 h-4 text-[#0284c7]" />
@@ -245,7 +211,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
             </button>
 
             {/* Quick Action in Mobile Menu */}
-            <div className="pt-4 mt-2 border-t border-slate-700/40">
+            <div className="pt-4 mt-2 border-t border-slate-200">
               <button
                 onClick={() => handleNav('shop')}
                 className="w-full py-3.5 px-5 bg-[#0284c7] hover:bg-[#0369a1] text-white font-bold rounded-xl flex items-center justify-center gap-2 text-sm shadow-md cursor-pointer border-none transition-colors"
