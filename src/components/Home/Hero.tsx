@@ -58,13 +58,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
 
           <div className="flex flex-col sm:flex-row gap-3.5 w-full sm:w-auto mb-12">
             <button
-              type="button"
-              onClick={() => onNavigate?.('shop')}
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto text-center py-3.5 px-8 rounded-xl font-bold text-[14px] uppercase tracking-wider transition-all duration-300 bg-[#0284c7] text-white hover:bg-[#0369a1] border-none cursor-pointer shadow-lg shadow-sky-600/30 hover:scale-[1.02]"
-            >
-              EXPLORE PRINTERS
-            </button>
-            <button
               id="hero-printer-setup-btn"
               type="button"
               onClick={() => setIsBrandModalOpen(true)}
