@@ -24,7 +24,6 @@ const Shop: React.FC<ShopProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   
-  // Resolve category from initial prop or current URL hash
   const getCategoryFromHash = (): string | null => {
     if (initialCategory) return initialCategory;
     if (typeof window !== 'undefined') {
@@ -42,7 +41,6 @@ const Shop: React.FC<ShopProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
-  // React to initialCategory prop changes from parent router
   useEffect(() => {
     if (initialCategory !== undefined) {
       setSelectedCategory(initialCategory);
@@ -50,7 +48,6 @@ const Shop: React.FC<ShopProps> = ({
     }
   }, [initialCategory]);
 
-  // Listen to hash changes in case user navigates back/forward or clicks direct links
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash.toLowerCase();
@@ -71,7 +68,6 @@ const Shop: React.FC<ShopProps> = ({
     return () => window.removeEventListener('hashchange', handleHash);
   }, []);
 
-  // Category counts
   const categoryCounts = useMemo(() => {
     return {
       enterprise: allProducts.filter((p) => p.category === 'Enterprise Printer').length,
@@ -80,23 +76,19 @@ const Shop: React.FC<ShopProps> = ({
     };
   }, []);
 
-  // Filtered & Sorted products
   const filteredProducts = useMemo(() => {
     return allProducts
       .filter((product) => {
-        // Search filter
         if (searchQuery.trim()) {
           const matchTitle = product.title.toLowerCase().includes(searchQuery.toLowerCase());
           const matchCat = product.category.toLowerCase().includes(searchQuery.toLowerCase());
           if (!matchTitle && !matchCat) return false;
         }
 
-        // Category filter
         if (selectedCategory && product.category !== selectedCategory) {
           return false;
         }
 
-        // Price filter
         if (product.price < priceRange[0] || product.price > priceRange[1]) {
           return false;
         }
@@ -114,7 +106,6 @@ const Shop: React.FC<ShopProps> = ({
   const totalResults = filteredProducts.length;
   const totalPages = Math.ceil(totalResults / itemsPerPage);
 
-  // Paginated slice
   const paginatedProducts = useMemo(() => {
     const start = (currentPage - 1) * itemsPerPage;
     return filteredProducts.slice(start, start + itemsPerPage);
@@ -156,13 +147,10 @@ const Shop: React.FC<ShopProps> = ({
 
   return (
     <div className="min-h-screen bg-[#f7f9fa] flex flex-col font-sans text-gray-800">
-      {/* 1. TOP NAVIGATION */}
       <Header onNavigate={onNavigate} currentPage="shop" />
 
-      {/* 2. MAIN SHOP CONTENT CONTAINER */}
       <main className="flex-1 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* Left Column: Sidebar Widgets */}
           <ShopSidebar
             searchQuery={searchQuery}
             onSearchChange={handleSearchChange}
@@ -174,7 +162,6 @@ const Shop: React.FC<ShopProps> = ({
             onSelectProduct={onSelectProduct}
           />
 
-          {/* Right Column: Hero Banner, Products Grid & Pagination */}
           <div className="flex-1 w-full min-w-0">
             <ShopBanner 
               onNavigate={onNavigate} 
@@ -202,10 +189,8 @@ const Shop: React.FC<ShopProps> = ({
         </div>
       </main>
 
-      {/* 3. FLOATING CART BADGE */}
       <FloatingCart />
 
-      {/* 4. FOOTER */}
       <Footer onNavigate={onNavigate} />
     </div>
   );

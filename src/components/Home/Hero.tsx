@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import type { BrandId } from '../BrandSetup';
 import BrandSetupCard from './BrandSetupCard';
 
@@ -32,14 +32,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigate: _onNavigate, onSelectBrand }) =
   return (
     <>
       <section className="relative min-h-[660px] flex items-center bg-[url('/hero-bg.jpg')] bg-cover bg-center overflow-hidden">
-        {/* Modern dark gradient overlay with depth */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f1d2d]/90 via-[#172c42]/75 to-[#1c3852]/60 mix-blend-normal"></div>
 
-        {/* Ambient radial glow */}
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 text-white max-w-[1200px] mx-auto w-full pt-28 sm:pt-32 md:pt-28 pb-12 sm:pb-16 px-5 md:px-8">
-          {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold text-sky-200 backdrop-blur-md mb-6 shadow-xs max-w-full">
             <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse shrink-0" />
             <span className="truncate">Trusted Printer Hardware, Setup &amp; Support</span>
@@ -78,7 +75,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate: _onNavigate, onSelectBrand }) =
             </button>
           </div>
 
-          {/* Quick Stats Strip */}
           <div className="pt-6 border-t border-white/15 flex flex-wrap items-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-300">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
@@ -96,7 +92,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate: _onNavigate, onSelectBrand }) =
         </div>
       </section>
 
-      {/* Brand Selection Section (Below Hero & Above BrandSelection / Featured Products) */}
       <section className="bg-slate-50/80 py-12 sm:py-16 border-b border-slate-200/80" id="select-printer-brand">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 border border-slate-100">
@@ -105,7 +100,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate: _onNavigate, onSelectBrand }) =
         </div>
       </section>
 
-      {/* Brand Selection Modal */}
       {isBrandModalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
@@ -115,7 +109,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate: _onNavigate, onSelectBrand }) =
             className="bg-white rounded-2xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-slate-100 relative text-gray-900"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               type="button"
               onClick={() => setIsBrandModalOpen(false)}

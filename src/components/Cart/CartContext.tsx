@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+﻿import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export interface CartItem {
   id: string;
@@ -33,7 +33,6 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Initial sample cart matching user's reference mockup (dynamic & interactive)
 const INITIAL_CART_ITEMS: CartItem[] = [
   {
     id: 'hp-deskjet-2825e',
@@ -60,7 +59,6 @@ const INITIAL_CART_ITEMS: CartItem[] = [
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [items, setItems] = useState<CartItem[]>(() => {
-    // Optional localStorage persistence (can easily be replaced with API sync)
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('webplanets_cart');
       if (saved) {
@@ -77,7 +75,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isOpen, setIsOpen] = useState(false);
   const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>(null);
 
-  // Sync to localStorage
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('webplanets_cart', JSON.stringify(items));
@@ -87,11 +84,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
-  /**
-   * Add a product to cart.
-   * Future API integration point:
-   * await fetch('/api/cart/items', { method: 'POST', body: JSON.stringify({ productId, quantity }) })
-   */
   const addToCart = (
     product: { id: string; title: string; price: number; image: string },
     quantity = 1
@@ -119,11 +111,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsOpen(true);
   };
 
-  /**
-   * Update quantity of an item (+1 or -1).
-   * Future API integration point:
-   * await fetch(`/api/cart/items/${id}`, { method: 'PATCH', body: JSON.stringify({ quantity }) })
-   */
   const updateQuantity = (id: string, delta: number) => {
     setItems((prevItems) =>
       prevItems
@@ -138,11 +125,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     );
   };
 
-  /**
-   * Remove item from cart.
-   * Future API integration point:
-   * await fetch(`/api/cart/items/${id}`, { method: 'DELETE' })
-   */
   const removeFromCart = (id: string) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
@@ -165,7 +147,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setAppliedCoupon(null);
   };
 
-  // Calculations
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const discount = 0;
   const total = subtotal;

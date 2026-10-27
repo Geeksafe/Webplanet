@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useCart } from './CartContext';
 
 interface CartDrawerProps {
@@ -43,23 +43,19 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
 
   return (
     <>
-      {/* 1. Backdrop Overlay */}
       <div 
         className="fixed inset-0 bg-black/45 z-50 transition-opacity backdrop-blur-[1px]"
         onClick={closeCart}
         aria-hidden="true"
       />
 
-      {/* 2. Slide-over Drawer Panel */}
       <aside 
         className="fixed inset-y-0 right-0 z-50 w-full max-w-[420px] bg-white shadow-2xl flex flex-col transform transition-transform duration-300 ease-out"
         role="dialog"
         aria-modal="true"
         aria-label="Review Your Cart"
       >
-        {/* Drawer Header */}
         <div className="px-6 py-4.5 border-b border-gray-100 flex items-center justify-between bg-white shrink-0">
-          {/* Close Arrow Button (Points right to slide away) */}
           <button
             type="button"
             onClick={closeCart}
@@ -81,18 +77,15 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
             </svg>
           </button>
 
-          {/* Title */}
           <h2 className="text-[18px] font-bold text-gray-900 tracking-tight">
             Review Your Cart
           </h2>
 
-          {/* Total Items Badge */}
           <span className="w-6 h-6 bg-[#f1f3f5] text-gray-700 rounded text-[12px] font-bold flex items-center justify-center shrink-0">
             {totalCount}
           </span>
         </div>
 
-        {/* Drawer Body - Scrollable Items List */}
         <div className="flex-1 overflow-y-auto px-6 divide-y divide-gray-100">
           {items.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center py-12">
@@ -121,7 +114,6 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
           ) : (
             items.map((item) => (
               <div key={item.id} className="py-4.5 flex items-center gap-3.5">
-                {/* Thumbnail */}
                 <div 
                   onClick={() => handleItemClick(item.id)}
                   className="w-[68px] h-[68px] rounded bg-[#f8f9fa] border border-gray-100 p-1.5 flex items-center justify-center shrink-0 cursor-pointer hover:border-gray-300 transition-colors"
@@ -133,7 +125,6 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
                   />
                 </div>
 
-                {/* Details */}
                 <div className="flex-1 min-w-0 pr-1">
                   <h4 
                     onClick={() => handleItemClick(item.id)}
@@ -156,7 +147,6 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
                   </button>
                 </div>
 
-                {/* Vertical Stepper Counter */}
                 <div className="w-[26px] border border-gray-200 rounded flex flex-col items-center bg-white text-[11px] shrink-0 overflow-hidden select-none">
                   <button
                     type="button"
@@ -183,10 +173,8 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
           )}
         </div>
 
-        {/* Drawer Footer (Totals & Checkout) */}
         {items.length > 0 && (
           <div className="border-t border-gray-200/80 bg-white shrink-0">
-            {/* Totals Summary */}
             <div className="px-6 py-4 flex flex-col gap-2.5 text-[13.5px]">
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-gray-800">Subtotal</span>
@@ -209,14 +197,13 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
               </div>
             </div>
 
-            {/* Proceed to Checkout Button */}
             <div className="px-6 pb-6 pt-1">
               <button
                 type="button"
                 onClick={handleProceedToCheckout}
                 className="w-full py-3 bg-[#0284c7] hover:bg-[#0369a1] text-white text-[13.5px] font-bold rounded shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer border-none"
               >
-                Proceed to Checkout →
+                Proceed to Checkout
               </button>
             </div>
           </div>

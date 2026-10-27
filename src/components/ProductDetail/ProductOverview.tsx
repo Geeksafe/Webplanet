@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import type { ProductDetail } from './types';
 import { useCart } from '../Cart/CartContext';
 
@@ -26,17 +26,14 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({ product, onNavigate }
 
   return (
     <div className="flex flex-col">
-      {/* Category small header */}
       <div className="text-[12px] font-semibold text-gray-500 uppercase tracking-wider mb-2">
         {product.category}
       </div>
 
-      {/* Main Title */}
       <h1 className="text-[26px] sm:text-[30px] font-bold text-gray-900 leading-tight mb-3">
         {product.title}
       </h1>
 
-      {/* Price + Free Shipping */}
       <div className="flex items-baseline gap-2 mb-6">
         <span className="text-[22px] font-bold text-gray-900">
           ${product.price.toFixed(2)}
@@ -48,7 +45,6 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({ product, onNavigate }
         )}
       </div>
 
-      {/* Bullet Features with Bold Titles */}
       <div className="flex flex-col gap-4 mb-7 text-[13.5px] leading-relaxed text-gray-700">
         {product.features.map((feature, idx) => (
           <div key={idx} className="flex flex-col">
@@ -62,7 +58,6 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({ product, onNavigate }
         ))}
       </div>
 
-      {/* Add To Cart Section */}
       <div className="flex items-center gap-3 mb-7 pt-2">
         <div className="flex items-center border border-gray-300 rounded overflow-hidden h-[42px] bg-white">
           <button
@@ -97,7 +92,6 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({ product, onNavigate }
         </button>
       </div>
 
-      {/* Product Meta (SKU, Category, Tag) */}
       <div className="border-t border-gray-100 pt-5 flex flex-col gap-1.5 text-[12.5px] text-gray-600">
         <div>
           <span className="font-semibold text-gray-800">SKU:</span> {product.sku}

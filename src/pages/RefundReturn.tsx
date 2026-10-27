@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   RotateCcw,
   Calendar,
@@ -33,7 +33,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'refund-return' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Refund & Returns"
           titleWhite="Refund &"
@@ -47,7 +46,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <RotateCcw className="w-5 h-5" />,
@@ -65,7 +63,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* 3 Metric Highlight Cards */}
           <LegalMetricCards
             metrics={[
               {
@@ -86,7 +83,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Quick Jump Navigation */}
           <LegalQuickNav
             title="Return & Refund Information"
             items={[
@@ -98,9 +94,7 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Structured Policy Sections */}
           <div className="space-y-6">
-            {/* Section 1: Returns */}
             <div
               id="returns-policy"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -120,17 +114,15 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
 
               <div className="space-y-3 text-sm text-gray-600 leading-relaxed mb-5">
-                <p>• Customers can initiate a return within <strong>14 calendar days</strong> of the confirmed delivery date.</p>
-                <p>• Products must be brand new, unblemished, and in complete re-sellable condition.</p>
+                <p>- Customers can initiate a return within <strong>14 calendar days</strong> of the confirmed delivery date.</p>
+                <p>- Products must be brand new, unblemished, and in complete re-sellable condition.</p>
               </div>
 
-              {/* Highlight Box */}
               <div className="p-4 sm:p-5 rounded-xl bg-sky-50/70 border border-sky-100 text-sky-950 text-xs sm:text-sm leading-relaxed">
                 <strong>Return requirement:</strong> Products must be returned in the original manufacturer packaging with all protective foam, power adapters, cables, starter ink cartridges, documentation, and accessories intact.
               </div>
             </div>
 
-            {/* Section 2: Return Process */}
             <div
               id="return-process"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -153,7 +145,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
                 To return an item, please follow our simple 3-step return procedure to obtain a Return Merchandise Authorization (RMA) number:
               </p>
 
-              {/* 3 Step Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 relative">
                   <div className="w-8 h-8 rounded-lg bg-[#0284c7] text-white font-bold text-sm flex items-center justify-center mb-3">
@@ -192,13 +183,12 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Return Address Box */}
               <div className="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/80">
                 <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-1">
                   Physical Return Address
                 </span>
                 <div className="font-bold text-sm sm:text-base text-gray-900">
-                  Pixfix Digital — Returns Department
+                  Pixfix Digital -  Returns Department
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600 mt-0.5">
                   3545 Ellicott Mills DR, Ellicott City MD 21043, USA
@@ -210,7 +200,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 3: Refunds */}
             <div
               id="refunds-timeline"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -230,8 +219,8 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
 
               <div className="space-y-3 text-sm text-gray-600 leading-relaxed mb-4">
-                <p>• After our intake facility receives and inspects the condition of the returned printer, we process your refund immediately.</p>
-                <p>• Refunds are issued to the original method of payment used at checkout.</p>
+                <p>- After our intake facility receives and inspects the condition of the returned printer, we process your refund immediately.</p>
+                <p>- Refunds are issued to the original method of payment used at checkout.</p>
               </div>
 
               <div className="p-4 sm:p-5 rounded-xl bg-emerald-50/70 border border-emerald-100 text-emerald-950 text-xs sm:text-sm leading-relaxed">
@@ -239,7 +228,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 4: Exceptions */}
             <div
               id="return-exceptions"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -259,9 +247,9 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
 
               <div className="space-y-2 text-sm text-gray-600 leading-relaxed mb-4">
-                <p>• <strong>Opened Ink & Toner:</strong> Consumable cartridges with broken factory foil seals cannot be returned unless found defective upon initial insertion.</p>
-                <p>• <strong>Software & Licenses:</strong> Downloadable setup keys, warranties, or software packages are non-refundable once activated.</p>
-                <p>• <strong>Physical Damage:</strong> Units with signs of customer misuse, ink leaks caused by inverted shipment, or dropped hardware cannot be accepted for refund.</p>
+                <p>- <strong>Opened Ink & Toner:</strong> Consumable cartridges with broken factory foil seals cannot be returned unless found defective upon initial insertion.</p>
+                <p>- <strong>Software & Licenses:</strong> Downloadable setup keys, warranties, or software packages are non-refundable once activated.</p>
+                <p>- <strong>Physical Damage:</strong> Units with signs of customer misuse, ink leaks caused by inverted shipment, or dropped hardware cannot be accepted for refund.</p>
               </div>
 
               <div className="p-4 rounded-xl bg-rose-50/70 border border-rose-100 text-rose-950 text-xs sm:text-sm leading-relaxed">
@@ -269,7 +257,6 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 5: Questions (Anchor) */}
             <div id="return-questions">
               <LegalContactBox
                 title="We're Here to Help"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import {
   HelpCircle,
   Search,
@@ -123,7 +123,7 @@ const FAQ_DATA: FAQItem[] = [
     id: 'warranty-independent',
     category: 'warranty',
     categoryLabel: 'Warranty & Support',
-    question: 'What is Pixfix Digital’s relationship with HP, Canon, Brother, and Epson?',
+    question: "What is Pixfix Digital's relationship with HP, Canon, Brother, and Epson?",
     answer:
       'Pixfix Digital operates as an independent service provider and retailer for printers and accessories. All brand names, logos, and trademarks mentioned are used purely for identification and compatibility reference and remain the property of their respective owners.',
   },
@@ -157,7 +157,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'faq' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Help Center & Knowledge Base"
           titleWhite="Frequently Asked"
@@ -171,7 +170,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <Sparkles className="w-5 h-5" />,
@@ -189,9 +187,7 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* Search & Filter Controls */}
           <div className="bg-white rounded-2xl p-5 sm:p-7 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] mb-8">
-            {/* Search Input */}
             <div className="relative mb-5">
               <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
@@ -212,7 +208,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
               )}
             </div>
 
-            {/* Category Filter Pills */}
             <div className="flex flex-wrap items-center gap-2">
               {[
                 { id: 'all', label: 'All Questions', icon: <HelpCircle className="w-3.5 h-3.5" /> },
@@ -237,7 +232,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* FAQ Accordion List */}
           <div className="space-y-3.5 mb-12">
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq) => {
@@ -302,7 +296,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             )}
           </div>
 
-          {/* Quick Action Navigation Strip */}
           <div className="bg-gradient-to-r from-sky-50 to-blue-50/70 rounded-2xl p-6 sm:p-8 border border-sky-100 flex flex-col md:flex-row items-center justify-between gap-5 mb-12">
             <div>
               <span className="text-xs font-bold text-sky-600 uppercase tracking-wider block mb-1">
@@ -336,7 +329,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Didn't Find Your Answer?"
             description="Our printer specialists are ready to walk you through setup diagnostics, order questions, or parts verification."

@@ -1,4 +1,4 @@
-export interface SendEmailPayload {
+﻿export interface SendEmailPayload {
   name: string;
   email: string;
   subject?: string;
@@ -22,7 +22,6 @@ const BACKEND_API_URL =
  * Dispatches to backend Express server, falling back to simulated success if offline.
  */
 export async function sendEmail(payload: SendEmailPayload): Promise<EmailServiceResponse> {
-  // If a backend Nodemailer endpoint is configured, forward the request to it
   if (BACKEND_API_URL) {
     try {
       console.log('[EmailService] Sending request to backend:', BACKEND_API_URL, payload);
@@ -48,7 +47,6 @@ export async function sendEmail(payload: SendEmailPayload): Promise<EmailService
     }
   }
 
-  // Gimmick / simulate network latency for a realistic user experience (shows button loading spinner)
   await new Promise((resolve) => setTimeout(resolve, 600));
 
   console.log('[Form Submission - Mock Mode]', {

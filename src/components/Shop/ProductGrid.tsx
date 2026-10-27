@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { Product, SortOption } from './types';
 import ProductCard from './ProductCard';
 
@@ -23,7 +23,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({
 }) => {
   return (
     <div>
-      {/* Grid Header Controls */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 pb-2">
         <p className="text-[13px] sm:text-[14px] text-gray-500 font-normal">
           {totalResults > 0 ? (
@@ -35,7 +34,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({
           )}
         </p>
 
-        {/* Sorting Dropdown */}
         <div className="relative inline-block text-left">
           <select
             value={sortOption}
@@ -55,7 +53,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({
         </div>
       </div>
 
-      {/* 3-Column Products Grid */}
       {products.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {products.map((product) => (

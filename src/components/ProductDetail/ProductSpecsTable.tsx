@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import type { ProductSpecification } from './types';
 import ProductReviews from './ProductReviews';
 
@@ -27,7 +27,6 @@ const ProductSpecsTable: React.FC<ProductSpecsTableProps> = ({
 
   return (
     <div className="w-full mt-14 border-t border-gray-200 pt-8">
-      {/* Tabs Headers */}
       <div className="flex items-center gap-8 border-b border-gray-200 mb-6">
         <button
           type="button"
@@ -54,11 +53,9 @@ const ProductSpecsTable: React.FC<ProductSpecsTableProps> = ({
         </button>
       </div>
 
-      {/* Tab Content */}
       {activeTab === 'description' ? (
         <div className="overflow-x-auto">
           <table className="w-full border-collapse border border-gray-200 text-left text-[13px] sm:text-[13.5px]">
-            {/* Table Header: Solid Black matching screenshot */}
             <thead>
               <tr className="bg-black text-white">
                 <th className="py-3 px-4 font-bold tracking-wider text-[13px] w-1/3 sm:w-1/4 border-r border-gray-700">

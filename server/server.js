@@ -112,7 +112,7 @@ app.get('/api/health', (req, res) => {
  * Main Email Dispatch Endpoint
  */
 app.post('/api/send-email', rateLimiter, async (req, res) => {
-  console.log(`\n📥 [Incoming Form Submission] ${new Date().toLocaleTimeString()}`);
+  console.log(`[Incoming Form Submission] ${new Date().toLocaleTimeString()}`);
   console.log('   Payload:', {
     name: req.body?.name,
     email: req.body?.email,
@@ -262,10 +262,8 @@ app.listen(PORT, () => {
     : (process.env.EMAIL_HOST || 'smtp.hostinger.com');
   const hasPass = Boolean(process.env.HOSTINGER_EMAIL_PASS?.trim());
 
-  console.log(`===============================================`);
-  console.log(`🚀 Pixfix Mail Service running on port ${PORT}`);
-  console.log(`📧 Account: ${user}`);
-  console.log(`🌐 Server Host: ${host}`);
-  console.log(`🔒 SMTP Password: ${hasPass ? 'CONFIGURED ✅' : 'PENDING ⚠️ (Enter in server/.env)'}`);
-  console.log(`===============================================`);
+  console.log(`Pixfix Mail Service running on port ${PORT}`);
+  console.log(`Account: ${user}`);
+  console.log(`Server Host: ${host}`);
+  console.log(`SMTP Password: ${hasPass ? 'Configured' : 'Pending'}`);
 });

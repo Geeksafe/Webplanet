@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { CheckCircle2, Clock, AlertCircle, Loader2, Send } from 'lucide-react';
 import { sendEmail } from '../../services/emailService';
 import { trackContactConversion } from '../../services/analytics';
@@ -56,7 +56,6 @@ const ContactFormSection: React.FC = () => {
     <section className="bg-white py-14 sm:py-20 border-t border-gray-100">
       <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Context Info */}
           <div className="lg:col-span-5 flex flex-col justify-center pt-2">
             <span className="text-[#0284c7] text-xs sm:text-sm font-bold uppercase tracking-wider mb-2.5">
               PIXFIX DIGITAL
@@ -68,7 +67,6 @@ const ContactFormSection: React.FC = () => {
               Have a question about an order, product, shipping, returns, or anything else? Contact us by phone or email during our office hours and we'll be happy to assist.
             </p>
 
-            {/* Office Hours Info from Footer */}
             <div className="inline-flex items-center gap-3 bg-[#f8fafc] border border-gray-200/80 rounded-xl p-4 text-xs sm:text-sm text-gray-700">
               <Clock className="w-5 h-5 text-[#0284c7] shrink-0" />
               <div>
@@ -78,7 +76,6 @@ const ContactFormSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Contact Form Card */}
           <div className="lg:col-span-7">
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-7 sm:p-10">
               {isSubmitted ? (
@@ -113,7 +110,6 @@ const ContactFormSection: React.FC = () => {
                     </div>
                   )}
 
-                  {/* Honeypot field for anti-spam (invisible to normal users) */}
                   <input
                     type="checkbox"
                     name="botcheck"

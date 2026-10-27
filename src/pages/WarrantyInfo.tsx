@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   ShieldCheck,
   Calendar,
@@ -28,7 +28,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'warranty-info' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Product Warranty Information"
           titleWhite="Manufacturer"
@@ -42,7 +41,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <MapPin className="w-5 h-5" />,
@@ -65,7 +63,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* Quick Jump Navigation */}
           <LegalQuickNav
             title="Warranty Information Sections"
             items={[
@@ -77,9 +74,7 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Structured Policy Sections */}
           <div className="space-y-6">
-            {/* Section 1: Warranty Coverage */}
             <div
               id="warranty-coverage"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -99,12 +94,11 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
               </div>
 
               <div className="space-y-3 text-sm text-gray-600 leading-relaxed mb-6">
-                <p>• All brand new printers sold by Pixfix Digital are covered by the original manufacturer&apos;s warranty where applicable.</p>
-                <p>• Pixfix Digital does not provide direct internal manufacturer warranty service, component repairs, or proprietary parts replacement.</p>
-                <p>• Warranty coverage duration, limited policies, and terms are determined solely by the manufacturer and vary by product category and region.</p>
+                <p>- All brand new printers sold by Pixfix Digital are covered by the original manufacturer&apos;s warranty where applicable.</p>
+                <p>- Pixfix Digital does not provide direct internal manufacturer warranty service, component repairs, or proprietary parts replacement.</p>
+                <p>- Warranty coverage duration, limited policies, and terms are determined solely by the manufacturer and vary by product category and region.</p>
               </div>
 
-              {/* 3 Highlight Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center">
                   <div className="font-bold text-sm text-gray-900 mb-1">
@@ -135,7 +129,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 2: Important Notices */}
             <div
               id="warranty-notices"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -154,18 +147,15 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Notice 1 */}
               <div className="p-4 sm:p-5 rounded-xl bg-rose-50/70 border border-rose-100 text-rose-950 text-xs sm:text-sm leading-relaxed mb-4">
                 <strong>No Additional Warranty:</strong> Pixfix Digital makes no warranties beyond any manufacturer warranty that may apply. Products are provided on an &quot;as is&quot; and &quot;as available&quot; basis except as required by applicable law.
               </div>
 
-              {/* Notice 2 */}
               <div className="p-4 sm:p-5 rounded-xl bg-sky-50/70 border border-sky-100 text-sky-950 text-xs sm:text-sm leading-relaxed">
                 <strong>Manufacturer Direct Support:</strong> For warranty service, repairs, or technical hardware claims, please contact the product manufacturer directly. Their contact information is typically located in the product documentation or on the manufacturer&apos;s official website.
               </div>
             </div>
 
-            {/* Section 3: Manufacturer Support Contacts */}
             <div
               id="warranty-support"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -189,7 +179,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* HP */}
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
                   <div className="font-bold text-base text-gray-900 mb-1 flex items-center justify-between">
                     <span>HP Support</span>
@@ -201,7 +190,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
                   </a>
                 </div>
 
-                {/* Canon */}
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
                   <div className="font-bold text-base text-gray-900 mb-1 flex items-center justify-between">
                     <span>Canon Support</span>
@@ -213,7 +201,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
                   </a>
                 </div>
 
-                {/* Brother */}
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
                   <div className="font-bold text-base text-gray-900 mb-1 flex items-center justify-between">
                     <span>Brother Support</span>
@@ -225,7 +212,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
                   </a>
                 </div>
 
-                {/* Epson */}
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
                   <div className="font-bold text-base text-gray-900 mb-1 flex items-center justify-between">
                     <span>Epson Support</span>
@@ -239,7 +225,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 4: Product Registration */}
             <div
               id="warranty-registration"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -267,7 +252,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 5: Related Policies */}
             <div
               id="warranty-related"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -319,7 +303,6 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Need Help With Your Warranty?"
             description="For questions regarding your purchase invoice, serial number location, or manufacturer warranty verification, contact our support team."

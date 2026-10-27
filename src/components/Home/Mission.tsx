@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Target, Zap, ShieldCheck } from 'lucide-react';
 
 const Mission: React.FC = () => {
@@ -6,7 +6,6 @@ const Mission: React.FC = () => {
     <section className="py-20 sm:py-24 bg-white border-t border-slate-100">
       <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Image Column */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
               <img 
@@ -18,7 +17,6 @@ const Mission: React.FC = () => {
             </div>
           </div>
 
-          {/* Copy Column */}
           <div className="lg:col-span-7 text-left">
             <span className="text-[#0284c7] text-xs sm:text-sm font-bold uppercase tracking-wider mb-2 block">
               Purpose &amp; Commitment
@@ -29,14 +27,13 @@ const Mission: React.FC = () => {
 
             <div className="text-sm sm:text-base leading-relaxed text-gray-600 space-y-4 mb-8">
               <p>
-                Our mission is to make printer maintenance and troubleshooting simple and stress-free, even for users with limited technical background. We cover common day-to-day challenges—including driver installation, network setup, offline errors, and Wi-Fi connectivity problems.
+                Our mission is to make printer maintenance and troubleshooting simple and stress-free, even for users with limited technical background. We cover common day-to-day challenges - including driver installation, network setup, offline errors, and Wi-Fi connectivity problems.
               </p>
               <p>
                 Whether for home study or busy corporate offices, our guidance improves device performance and helps prevent recurring obstacles. Our focus is always on simplicity, accuracy, and getting you back to productive printing as quickly as possible.
               </p>
             </div>
 
-            {/* 3 Core Value Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                 <div className="w-8 h-8 rounded-lg bg-sky-50 text-[#0284c7] flex items-center justify-center mb-2.5">

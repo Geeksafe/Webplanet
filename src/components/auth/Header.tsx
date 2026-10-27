@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
 import { Menu, X, Home, Info, ShoppingBag, PhoneCall, HelpCircle, Wrench, ArrowRight } from 'lucide-react';
 import type { NavPage } from '../../types/navigation';
@@ -13,7 +13,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
   const isHome = currentPage === 'home';
   const textColor = 'text-slate-700';
 
-  // Close mobile menu on escape key or resize
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsMobileMenuOpen(false);
@@ -41,12 +40,10 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
         }`}
     >
       <div className="w-full px-4 sm:px-6 md:px-8 flex justify-between items-center h-18 sm:h-20">
-        {/* LOGO */}
         <Logo
           onClick={() => handleNav('home')}
         />
 
-        {/* DESKTOP NAV (Hidden on mobile) */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           <ul className="flex items-center list-none gap-5 lg:gap-7 m-0 p-0">
             <li>
@@ -97,7 +94,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
           </ul>
         </nav>
 
-        {/* MOBILE ACTIONS (Visible only on mobile screens < 768px) */}
         <div className="flex md:hidden items-center gap-2">
           <a
             href="tel:1-844-883-0609"
@@ -121,11 +117,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
         </div>
       </div>
 
-      {/* MOBILE DROPDOWN MENU */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full transition-all duration-300 shadow-2xl border-b z-50 bg-white border-slate-200 text-slate-900">
           <div className="px-5 py-6 flex flex-col gap-2">
-            {/* Toll Free support for mobile */}
             <a
               href="tel:1-844-883-0609"
               className="flex items-center justify-between w-full py-3 px-4 rounded-xl text-sm font-semibold transition-colors no-underline mb-1 bg-sky-50 text-[#0284c7] hover:bg-sky-100 border border-sky-200/60"
@@ -203,7 +197,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage = 'home' }) => 
               <span>Contact Us</span>
             </button>
 
-            {/* Quick Action in Mobile Menu */}
             <div className="pt-4 mt-2 border-t border-slate-200">
               <button
                 onClick={() => handleNav('shop')}

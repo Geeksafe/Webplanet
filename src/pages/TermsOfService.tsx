@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   Scale,
   Calendar,
@@ -29,7 +29,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'terms-of-service' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Legal & Policies"
           titleWhite="Terms of"
@@ -43,7 +42,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <FileText className="w-5 h-5" />,
@@ -61,7 +59,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* Quick Nav */}
           <LegalQuickNav
             title="Terms of Service Sections"
             items={[
@@ -74,9 +71,7 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Structured Sections */}
           <div className="space-y-6">
-            {/* Section 1 */}
             <div
               id="terms-acceptance"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -100,7 +95,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            {/* Section 2: Independent Provider & Trademark Disclaimer */}
             <div
               id="terms-independent"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -120,7 +114,7 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
               </div>
 
               <div className="p-4 sm:p-5 rounded-xl bg-amber-50/80 border border-amber-200 text-amber-950 text-xs sm:text-sm leading-relaxed mb-4">
-                <strong>Important Notice:</strong> Pixfix Digital is an independent service provider and retailer for printers and related equipment. Brand names, logos, and trademarks—including but not limited to <strong>HP, Canon, Brother, and Epson</strong>—are registered trademarks of their respective owners and are mentioned purely for identification and compatibility purposes. Pixfix Digital disclaims any direct sponsorship, affiliation, or authorized dealer endorsement by these manufacturers unless explicitly stated.
+                <strong>Important Notice:</strong> Pixfix Digital is an independent service provider and retailer for printers and related equipment. Brand names, logos, and trademarks - including but not limited to <strong>HP, Canon, Brother, and Epson</strong> - are registered trademarks of their respective owners and are mentioned purely for identification and compatibility purposes. Pixfix Digital disclaims any direct sponsorship, affiliation, or authorized dealer endorsement by these manufacturers unless explicitly stated.
               </div>
 
               <p className="text-sm text-gray-600 leading-relaxed">
@@ -128,7 +122,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            {/* Section 3: Orders & Pricing */}
             <div
               id="terms-orders"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -163,7 +156,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 4: Permitted Use */}
             <div
               id="terms-conduct"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -187,7 +179,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            {/* Section 5: Limitation of Liability */}
             <div
               id="terms-liability"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -211,7 +202,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            {/* Section 6: Governing Law */}
             <div
               id="terms-law"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -236,7 +226,6 @@ const TermsOfService: React.FC<TermsOfServiceProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Questions Regarding Terms of Service?"
             description="For legal inquiries, terms clarification, or official correspondence, contact our administrative office."

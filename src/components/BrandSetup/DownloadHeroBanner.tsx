@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import type { BrandSetupConfig } from './types';
 
 interface DownloadHeroBannerProps {
@@ -26,19 +26,16 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
       return;
     }
 
-    // Slowly advance installation progress from 0% to ~72%
     const interval = setInterval(() => {
       setInstallProgress((prev) => {
         if (prev >= 72) {
           clearInterval(interval);
           setShowFailedText(true);
-          // Wait 1.8 seconds after failure text shows, then transition to error page
           setTimeout(() => {
             onInstallationFailed();
           }, 1800);
           return 72;
         }
-        // Advance progress smoothly and realistically
         const next = prev + (prev < 30 ? 6 : prev < 55 ? 4 : 2);
         return Math.min(next, 72);
       });
@@ -49,7 +46,6 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
 
   return (
     <section className="relative overflow-hidden w-full text-white bg-[#0088d8] py-14 sm:py-20 lg:py-24">
-      {/* Background cover / watermark if present */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-25 select-none"
         style={{
@@ -59,16 +55,13 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
 
       <div className="relative z-10 max-w-[1240px] mx-auto px-6 sm:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column */}
           <div className="lg:col-span-7 flex flex-col items-start">
             {isDownloading ? (
-              /* ACTIVE DOWNLOADING & INSTALLING PROGRESS (Images 1 & 3) */
               <div className="w-full max-w-[540px]">
                 <h1 className="text-[34px] sm:text-[44px] lg:text-[48px] font-black text-white tracking-tight leading-tight mb-8">
                   Downloading {config.softwareName}
                 </h1>
 
-                {/* Downloading progress bar */}
                 <div className="mb-6">
                   <div className="text-[16px] font-bold text-white mb-2">
                     Downloading
@@ -78,7 +71,6 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
                   </div>
                 </div>
 
-                {/* Installation progress percentage & bar */}
                 <div className="mb-4">
                   <div className="text-[16px] font-bold text-white mb-2">
                     100%
@@ -91,7 +83,6 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
                   </div>
                 </div>
 
-                {/* Installation Failed notification (Image 1 & 3) */}
                 {showFailedText && (
                   <div className="text-[17px] font-bold text-white mt-4 animate-fadeIn">
                     Installation Failed
@@ -99,7 +90,6 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
                 )}
               </div>
             ) : (
-              /* READY TO DOWNLOAD STAGE (before clicking Download) */
               <div className="w-full max-w-[540px]">
                 <h1 className="text-[32px] sm:text-[40px] lg:text-[44px] font-extrabold text-white tracking-tight leading-tight mb-6">
                   Download Your Software To Start Printing
@@ -129,7 +119,6 @@ const DownloadHeroBanner: React.FC<DownloadHeroBannerProps> = ({
             )}
           </div>
 
-          {/* Right Column: Printer Image with printed chart */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative">
               <img

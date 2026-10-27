@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Filter, X } from 'lucide-react';
 
 interface ShopBannerProps {
@@ -16,7 +16,6 @@ const ShopBanner: React.FC<ShopBannerProps> = ({
 }) => {
   return (
     <div className="mb-8">
-      {/* Breadcrumb */}
       <nav className="text-[13px] text-gray-400 mb-2 flex items-center gap-1.5 font-normal flex-wrap">
         <button 
           onClick={() => onNavigate('home')} 
@@ -47,7 +46,6 @@ const ShopBanner: React.FC<ShopBannerProps> = ({
         )}
       </nav>
 
-      {/* Main Title */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-5">
         <h1 className="text-[32px] sm:text-[38px] font-bold text-gray-900 tracking-tight m-0">
           {selectedCategory ? selectedCategory : 'Hardware & Printer Shop'}
@@ -59,7 +57,6 @@ const ShopBanner: React.FC<ShopBannerProps> = ({
         )}
       </div>
 
-      {/* Active Category Filter Pill Bar */}
       {selectedCategory && (
         <div className="flex flex-wrap items-center justify-between gap-3 bg-gradient-to-r from-sky-50 to-blue-50/60 border border-sky-100 rounded-xl px-4 sm:px-5 py-3 mb-5 shadow-2xs">
           <div className="flex items-center gap-2.5 flex-wrap">
@@ -85,13 +82,12 @@ const ShopBanner: React.FC<ShopBannerProps> = ({
               onClick={onClearCategory}
               className="text-xs font-semibold text-[#0284c7] hover:text-[#0369a1] hover:underline cursor-pointer bg-transparent border-none p-0 transition-colors"
             >
-              Reset to view all 22 products →
+              Reset to view all 22 products
             </button>
           )}
         </div>
       )}
 
-      {/* Hero Printer Image Card */}
       <div className="bg-white rounded-xl border border-gray-200/70 p-4 sm:p-6 shadow-[0_2px_8px_rgba(0,0,0,0.02)] overflow-hidden">
         <div className="w-full flex items-center justify-center bg-white">
           <img 

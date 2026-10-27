@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetail from './pages/ProductDetail';
@@ -25,7 +25,6 @@ const App: React.FC = () => {
     }
     const hash = window.location.hash.toLowerCase();
 
-    // Setup routes for brand printers
     if (hash.startsWith('#setup/')) {
       const b = hash.replace(/^#setup\//i, '').trim();
       const validBrand: BrandId = (['hp', 'canon', 'brother', 'epson'].includes(b) ? b : 'hp') as BrandId;
@@ -52,18 +51,15 @@ const App: React.FC = () => {
       return { page: 'setup', id: 'hp-deskjet-2820e', brand: 'epson', category: null };
     }
 
-    // Product detail route
     if (hash.startsWith('#product/')) {
       const id = window.location.hash.replace(/^#product\//i, '');
       return { page: 'product', id: id || 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // FAQs route
     if (hash.includes('faq')) {
       return { page: 'faq', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // Services route
     if (hash.includes('service')) {
       return { page: 'services', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
@@ -72,7 +68,6 @@ const App: React.FC = () => {
       return { page: 'services', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // Legal routes
     if (hash.includes('privacy')) {
       return { page: 'privacy-policy', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
@@ -97,22 +92,18 @@ const App: React.FC = () => {
       return { page: 'sitemap', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // About route
     if (hash.includes('about')) {
       return { page: 'about', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // Contact route
     if (hash.includes('contact')) {
       return { page: 'contact', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // Checkout route
     if (hash.includes('checkout')) {
       return { page: 'checkout', id: 'hp-deskjet-2820e', brand: 'hp', category: null };
     }
 
-    // Shop route with optional category filter
     if (hash.startsWith('#shop') || hash.includes('shop')) {
       let cat: string | null = null;
       if (hash.includes('enterprise')) {
@@ -148,7 +139,6 @@ const App: React.FC = () => {
         setShopCategory(parsed.category || null);
       }
 
-      // Track virtual pageview in TrafficGuard for Single Page App transitions
       if (typeof window !== 'undefined' && (window as any).dataTrafficGuard) {
         (window as any).dataTrafficGuard.push([
           'event',
@@ -274,7 +264,6 @@ const App: React.FC = () => {
           />
         )}
 
-        {/* Global Slide-over Cart Drawer */}
         <CartDrawer
           onNavigateToProduct={handleSelectProduct}
           onNavigateToShop={() => navigate('shop')}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Star, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { sendEmail } from '../../services/emailService';
 
@@ -25,7 +25,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
 }) => {
   const storageKey = `webplanets_reviews_${productId || productTitle.replace(/\s+/g, '_')}`;
 
-  // Reviews state (persisted to localStorage)
   const [reviews, setReviews] = useState<ProductReviewItem[]>(() => {
     try {
       const saved = localStorage.getItem(storageKey);
@@ -35,7 +34,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
     }
   });
 
-  // Form input state
   const [rating, setRating] = useState<number>(0);
   const [hoverRating, setHoverRating] = useState<number>(0);
   const [review, setReview] = useState('');
@@ -43,12 +41,10 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
   const [email, setEmail] = useState(() => localStorage.getItem('webplanets_saved_reviewer_email') || '');
   const [saveDetails, setSaveDetails] = useState(() => localStorage.getItem('webplanets_saved_reviewer_pref') !== 'false');
 
-  // UI state
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Sync reviews if product changes
   useEffect(() => {
     try {
       const saved = localStorage.getItem(storageKey);
@@ -66,7 +62,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
     setErrorMessage(null);
     setSuccessMessage(null);
 
-    // Validation
     if (rating === 0) {
       setErrorMessage('Please select a rating by clicking on the stars.');
       return;
@@ -90,7 +85,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
     setIsSubmitting(true);
 
     try {
-      // 1. Dispatch review details to email via emailService
       const emailResponse = await sendEmail({
         name: name.trim(),
         email: email.trim(),
@@ -116,7 +110,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
         return;
       }
 
-      // 2. Save user preference for name & email in localStorage if checked
       if (saveDetails) {
         localStorage.setItem('webplanets_saved_reviewer_name', name.trim());
         localStorage.setItem('webplanets_saved_reviewer_email', email.trim());
@@ -127,7 +120,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
         localStorage.setItem('webplanets_saved_reviewer_pref', 'false');
       }
 
-      // 3. Create and store review item
       const newReview: ProductReviewItem = {
         id: Date.now().toString(),
         productId: productId || 'default',
@@ -147,7 +139,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
       localStorage.setItem(storageKey, JSON.stringify(updatedReviews));
       onReviewCountChange?.(updatedReviews.length);
 
-      // 4. Reset review field & rating
       setReview('');
       setRating(0);
       setHoverRating(0);
@@ -167,7 +158,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
 
   return (
     <div className="w-full text-left">
-      {/* Existing Reviews List */}
       {reviews.length > 0 ? (
         <div className="mb-10 space-y-5">
           <h3 className="text-base font-bold text-gray-900 border-b border-gray-200 pb-3">
@@ -212,11 +202,10 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
         <p className="text-[14px] text-gray-600 mb-6 font-normal">There are no reviews yet.</p>
       )}
 
-      {/* Review Submission Card Form */}
       <div className="border border-gray-200 bg-[#fafafa]/50 sm:bg-white p-6 sm:p-8 rounded-[2px]">
         <h3 className="text-[17px] sm:text-[18px] font-semibold text-gray-800 mb-1 leading-snug">
           {reviews.length === 0
-            ? `Be the first to review “${productTitle}”`
+            ? `Be the first to review "${productTitle}"`
             : `Add a review`}
         </h3>
 
@@ -224,7 +213,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
           Your email address will not be published. Required fields are marked *
         </p>
 
-        {/* Success Alert */}
         {successMessage && (
           <div className="mb-5 p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded text-xs sm:text-sm flex items-start gap-2.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -232,7 +220,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
           </div>
         )}
 
-        {/* Error Alert */}
         {errorMessage && (
           <div className="mb-5 p-3.5 bg-red-50 border border-red-200 text-red-700 rounded text-xs sm:text-sm flex items-start gap-2.5">
             <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
@@ -241,7 +228,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
         )}
 
         <form onSubmit={handleSubmit}>
-          {/* Star Rating Row */}
           <div className="flex items-center gap-2 mb-5">
             <span className="text-[13.5px] font-medium text-gray-700">Your rating *</span>
             <div
@@ -281,7 +267,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
             )}
           </div>
 
-          {/* Your Review Textarea */}
           <div className="mb-4">
             <label htmlFor="review" className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
               Your review *
@@ -297,7 +282,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
             />
           </div>
 
-          {/* Name & Email Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label htmlFor="reviewer-name" className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
@@ -330,7 +314,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
             </div>
           </div>
 
-          {/* Save Info Checkbox */}
           <div className="flex items-start gap-2.5 mb-6">
             <input
               id="save-info"
@@ -347,7 +330,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
             </label>
           </div>
 
-          {/* Submit Button */}
           <div>
             <button
               type="submit"

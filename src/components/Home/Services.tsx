@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import type { NavPage } from '../../types/navigation';
 
@@ -31,7 +31,6 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
   return (
     <section className="pt-16 sm:pt-20 pb-8 sm:pb-10 bg-[#f8fafc]" id="home-services">
       <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-[#0284c7] text-xs sm:text-sm font-bold uppercase tracking-wider mb-2 block">
             Comprehensive Support
@@ -44,14 +43,12 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               className="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_36px_-8px_rgba(2,132,199,0.15)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full"
             >
-              {/* Image Box */}
               <div className="relative w-full h-[220px] overflow-hidden bg-slate-100">
                 <img
                   src={service.image}
@@ -64,7 +61,6 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
                 </span>
               </div>
 
-              {/* Text Body */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-base sm:text-lg font-bold mb-3 text-gray-900 group-hover:text-[#0284c7] transition-colors leading-snug">

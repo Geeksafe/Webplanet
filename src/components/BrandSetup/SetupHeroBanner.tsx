@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import type { BrandSetupConfig } from './types';
 
 interface SetupHeroBannerProps {
@@ -28,7 +28,6 @@ const SetupHeroBanner: React.FC<SetupHeroBannerProps> = ({ config, onNext }) => 
 
   return (
     <section className="relative overflow-hidden w-full text-white">
-      {/* Banner watermark / background printer image */}
       <div 
         className="absolute inset-0 bg-cover bg-center select-none"
         style={{
@@ -36,16 +35,13 @@ const SetupHeroBanner: React.FC<SetupHeroBannerProps> = ({ config, onNext }) => 
         }}
       />
 
-      {/* Brand color overlay tint */}
       <div 
         className="absolute inset-0"
         style={{ background: config.overlayStyle }}
       />
 
-      {/* Hero content container */}
       <div className="relative z-10 max-w-[1240px] mx-auto px-6 sm:px-10 py-14 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Heading, Subtitle, Search Input */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <h1 className="text-[32px] sm:text-[42px] lg:text-[46px] font-extrabold text-white tracking-tight leading-tight mb-4">
               {config.heroTitle}
@@ -55,7 +51,6 @@ const SetupHeroBanner: React.FC<SetupHeroBannerProps> = ({ config, onNext }) => 
               {config.heroSubtitle}
             </p>
 
-            {/* Product search box */}
             <div className="w-full max-w-[520px] relative">
               <form onSubmit={handleSearchSubmit} className="flex flex-col items-start gap-4 w-full">
                 <div className="relative w-full">
@@ -71,7 +66,6 @@ const SetupHeroBanner: React.FC<SetupHeroBannerProps> = ({ config, onNext }) => 
                     className="w-full bg-white text-gray-900 placeholder:text-gray-500 rounded px-4 py-3.5 text-[14px] sm:text-[15px] outline-none shadow-md border border-transparent focus:border-white focus:ring-2 focus:ring-blue-300 transition-all"
                   />
 
-                  {/* Suggestions dropdown */}
                   {showSuggestions && productQuery.trim().length > 0 && filteredModels.length > 0 && (
                     <div className="absolute top-full left-0 right-0 mt-1 bg-white text-gray-800 rounded-md shadow-xl border border-gray-200 z-30 max-h-56 overflow-y-auto">
                       <div className="p-2 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
@@ -102,7 +96,6 @@ const SetupHeroBanner: React.FC<SetupHeroBannerProps> = ({ config, onNext }) => 
             </div>
           </div>
 
-          {/* Right Column: Hero Printer Image */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative group">
               <img

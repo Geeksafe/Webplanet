@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   ShieldCheck,
   Calendar,
@@ -29,7 +29,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'privacy-policy' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Product Policy / Privacy"
           titleWhite="Privacy"
@@ -43,7 +42,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Top Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <ShieldCheck className="w-5 h-5" />,
@@ -61,7 +59,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* Quick Jump Navigation */}
           <LegalQuickNav
             title="Privacy Policy Sections"
             items={[
@@ -74,9 +71,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Structured Policy Cards */}
           <div className="space-y-6">
-            {/* 1. Information We Collect */}
             <div
               id="info-collect"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -96,7 +91,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </div>
 
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-5">
-                When you interact with Pixfix Digital—whether purchasing a printer, requesting setup assistance, or contacting customer care—we may collect the following details:
+                When you interact with Pixfix Digital - whether purchasing a printer, requesting setup assistance, or contacting customer care - we may collect the following details:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -132,7 +127,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* 2. How We Use Data */}
             <div
               id="how-we-use"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -173,7 +167,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* 3. Data Protection & Security */}
             <div
               id="data-security"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -204,7 +197,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* 4. Service Partners */}
             <div
               id="third-parties"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -233,7 +225,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </ul>
             </div>
 
-            {/* 5. Cookies & Analytics */}
             <div
               id="cookies"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -257,7 +248,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            {/* 6. Your Rights */}
             <div
               id="your-rights"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -286,7 +276,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Have Questions About Your Privacy?"
             description="Our privacy officer is available to answer any questions regarding how your data is handled, stored, or protected."

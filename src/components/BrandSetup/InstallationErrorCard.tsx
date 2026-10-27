@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { BrandSetupConfig } from './types';
 
 interface InstallationErrorCardProps {
@@ -12,9 +12,7 @@ const InstallationErrorCard: React.FC<InstallationErrorCardProps> = ({
 }) => {
   return (
     <div className="w-full max-w-[880px] mx-auto px-4 py-8 animate-fadeIn">
-      {/* Main Fatal Error Window Card (Matching Image 4) */}
       <div className="bg-white rounded-lg border border-gray-300/80 shadow-2xl overflow-hidden text-left relative">
-        {/* Window Top Bar */}
         <div className="bg-[#e9ecef] px-6 py-4 flex items-center justify-between border-b border-gray-300">
           <div>
             <h3 className="text-[17px] font-bold text-gray-900 m-0">
@@ -33,11 +31,8 @@ const InstallationErrorCard: React.FC<InstallationErrorCardProps> = ({
           </div>
         </div>
 
-        {/* Window Body */}
         <div className="p-8 sm:p-12 text-center flex flex-col items-center">
-          {/* Printer Error Icon Graphic with Red Circle Slash and ERROR text */}
           <div className="relative mb-8 flex items-center justify-center">
-            {/* Outline Printer Graphic */}
             <svg
               className="w-32 h-28 text-gray-700"
               viewBox="0 0 100 80"
@@ -45,24 +40,17 @@ const InstallationErrorCard: React.FC<InstallationErrorCardProps> = ({
               stroke="currentColor"
               strokeWidth="2"
             >
-              {/* Paper Top */}
               <path d="M25 25 V5 H75 V25" stroke="currentColor" fill="#f8fafc" />
-              {/* Printer Body */}
               <rect x="10" y="25" width="80" height="35" rx="6" fill="#f1f5f9" stroke="currentColor" />
-              {/* Power button & slot */}
               <circle cx="20" cy="35" r="2" fill="#475569" />
               <rect x="25" y="42" width="50" height="4" fill="#334155" rx="1" />
-              {/* Paper Output Bottom Tray */}
               <path d="M20 52 L25 75 H75 L80 52" fill="#e2e8f0" stroke="currentColor" />
               <rect x="30" y="60" width="40" height="12" fill="#ffffff" stroke="currentColor" />
             </svg>
 
-            {/* Red Circle with Prohibition Slash ("NO" Symbol) and text ERROR */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-20 h-20 rounded-full border-4 border-red-600 flex items-center justify-center bg-white/70">
-                {/* Diagonal line */}
                 <div className="absolute w-full h-1 bg-red-600 rotate-45"></div>
-                {/* Text ERROR */}
                 <span className="relative z-10 text-[11px] font-black text-black bg-white/90 px-1 rounded shadow-xs tracking-wider">
                   ERROR
                 </span>
@@ -70,17 +58,14 @@ const InstallationErrorCard: React.FC<InstallationErrorCardProps> = ({
             </div>
           </div>
 
-          {/* Error Message */}
           <p className="text-[15px] sm:text-[16px] text-gray-800 leading-relaxed max-w-[680px] mb-8 font-normal">
             Printer driver installation has been failed due to fatal error &quot;C0000022&quot; preventing product driver installation.
           </p>
 
-          {/* Contact Prompt */}
           <p className="text-[18px] sm:text-[20px] font-serif text-gray-900 mb-4">
             Please Contact {config.brandName} Customer Support at :
           </p>
 
-          {/* Bold Clickable Toll-Free Phone Number */}
           <div className="mb-14">
             <a
               href={`tel:${config.supportPhone.replace(/[^0-9+]/g, '')}`}
@@ -91,7 +76,6 @@ const InstallationErrorCard: React.FC<InstallationErrorCardProps> = ({
           </div>
         </div>
 
-        {/* Bottom Left Angled Banner (Matching Image 4) */}
         <div className="relative w-full h-24 overflow-hidden mt-6">
           <div 
             className="absolute bottom-0 left-0 w-80 sm:w-96 h-28 bg-[#0085d0] flex items-center pl-6 sm:pl-8"
@@ -116,7 +100,6 @@ const InstallationErrorCard: React.FC<InstallationErrorCardProps> = ({
         </div>
       </div>
 
-      {/* Action Buttons Below Error Card */}
       <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
         <a
           href={`tel:${config.supportPhone.replace(/[^0-9+]/g, '')}`}

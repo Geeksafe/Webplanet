@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 interface LegalContactBoxProps {
@@ -12,7 +12,6 @@ const LegalContactBox: React.FC<LegalContactBoxProps> = ({
 }) => {
   return (
     <div className="bg-gradient-to-br from-[#2b3a4a] via-[#354659] to-[#253241] rounded-2xl p-6 sm:p-8 md:p-10 text-white shadow-xl mt-12 mb-6 border border-slate-700/40 relative overflow-hidden">
-      {/* Decorative accent glow */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10">
@@ -26,9 +25,7 @@ const LegalContactBox: React.FC<LegalContactBoxProps> = ({
           {description}
         </p>
 
-        {/* Contact Method Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          {/* Phone */}
           <a
             href="tel:1-844-883-0609"
             className="flex items-center gap-4 p-4 sm:p-5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-all text-white no-underline group"
@@ -46,7 +43,6 @@ const LegalContactBox: React.FC<LegalContactBoxProps> = ({
             </div>
           </a>
 
-          {/* Email */}
           <a
             href="mailto:support@geeksafeglobal.com"
             className="flex items-center gap-4 p-4 sm:p-5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-all text-white no-underline group"
@@ -65,7 +61,6 @@ const LegalContactBox: React.FC<LegalContactBoxProps> = ({
           </a>
         </div>
 
-        {/* Company Info Footer Strip */}
         <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs text-slate-300">
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4 text-sky-300 shrink-0" />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { AlertCircle, Loader2 } from 'lucide-react';
 import { sendEmail } from '../../services/emailService';
 
@@ -69,12 +69,10 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fadeIn">
-      {/* Modal Dialog Card */}
       <div 
         className="relative w-full max-w-[620px] bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header with Title and Close Button (matching Image 2) */}
         <div className="pt-6 pb-2 px-6 sm:px-8 flex items-start justify-between">
           <h2 className="text-[26px] sm:text-[28px] font-semibold text-[#1e5d95] tracking-tight m-0">
             Download Printer Drivers
@@ -92,7 +90,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
           </button>
         </div>
 
-        {/* Modal Body Form */}
         <form onSubmit={handleSubmit} className="px-6 sm:px-8 pb-8 pt-4 space-y-5 text-left">
           {errorMessage && (
             <div className="flex items-start gap-2.5 p-3.5 bg-red-50 border border-red-200 text-red-700 rounded-lg text-[13px]">
@@ -104,7 +101,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
             </div>
           )}
 
-          {/* Anti-spam honeypot */}
           <input
             type="checkbox"
             name="botcheck"
@@ -114,7 +110,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
             autoComplete="off"
           />
 
-          {/* Name Field (First, Last) */}
           <div>
             <label className="block text-[14px] font-medium text-gray-800 mb-1.5">
               Name <span className="text-red-500">*</span>
@@ -143,7 +138,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
             </div>
           </div>
 
-          {/* Email Field */}
           <div>
             <label className="block text-[14px] font-medium text-gray-800 mb-1.5">
               Email <span className="text-red-500">*</span>
@@ -157,7 +151,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
             />
           </div>
 
-          {/* Phone Number Field */}
           <div>
             <label className="block text-[14px] font-medium text-gray-800 mb-1.5">
               Phone Number: <span className="text-red-500">*</span>
@@ -171,7 +164,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
             />
           </div>
 
-          {/* Printer Model Number Field */}
           <div>
             <label className="block text-[14px] font-medium text-gray-800 mb-1.5">
               Printer Model Number: <span className="text-red-500">*</span>
@@ -186,7 +178,6 @@ const DownloadDriversModal: React.FC<DownloadDriversModalProps> = ({
             />
           </div>
 
-          {/* SUBMIT Button (matching Image 2) */}
           <div className="pt-2">
             <button
               type="submit"

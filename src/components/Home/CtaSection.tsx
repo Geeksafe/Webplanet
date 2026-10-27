@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, HelpCircle } from 'lucide-react';
 
 interface CtaSectionProps {
@@ -8,7 +8,6 @@ interface CtaSectionProps {
 const CtaSection: React.FC<CtaSectionProps> = ({ onNavigate }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#0f2847] via-[#153e6b] to-[#0284c7] py-16 sm:py-20 text-white">
-      {/* Decorative ambient background accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
 

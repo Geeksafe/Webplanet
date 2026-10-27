@@ -1,4 +1,4 @@
-import type { ProductDetail } from './types';
+﻿import type { ProductDetail } from './types';
 import { allProducts } from '../Shop/productsData';
 
 export const productDetailsMap: Record<string, ProductDetail> = {
@@ -29,7 +29,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Save up to 50% on ink and never run out",
-        "description": "Join over 12 million people enjoying the world’s first smart ink delivery service-up to 50% off on ink."
+        "description": "Join over 12 million people enjoying the world's first smart ink delivery service-up to 50% off on ink."
       },
       {
         "title": "Driving innovation with 60% recycled plastic",
@@ -2199,8 +2199,8 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "description": "Get blazing fast printing speeds and easy management tools with LaserJet Pro."
       },
       {
-        "title": "Workteams excel with HP’s black-and-white...",
-        "description": "Workteams excel with HP’s black-and-white office LaserJet printers, which pack extra punch with high-quality results, extra power, and more features."
+        "title": "Workteams excel with HP's black-and-white...",
+        "description": "Workteams excel with HP's black-and-white office LaserJet printers, which pack extra punch with high-quality results, extra power, and more features."
       },
       {
         "title": "This printer is intended to...",
@@ -2432,8 +2432,8 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "description": "Get blazing fast printing speeds and easy management tools with LaserJet Pro."
       },
       {
-        "title": "Workteams excel with HP’s black-and-white...",
-        "description": "Workteams excel with HP’s black-and-white office LaserJet printers, which pack extra punch with high-quality results, extra power, and more features."
+        "title": "Workteams excel with HP's black-and-white...",
+        "description": "Workteams excel with HP's black-and-white office LaserJet printers, which pack extra punch with high-quality results, extra power, and more features."
       },
       {
         "title": "This printer is intended to...",
@@ -2665,8 +2665,8 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "description": "Get blazing fast printing speeds and easy management tools with LaserJet Pro."
       },
       {
-        "title": "Workteams excel with HP’s black-and-white...",
-        "description": "Workteams excel with HP’s black-and-white office LaserJet printers, which pack extra punch with high-quality results, extra power, and more features."
+        "title": "Workteams excel with HP's black-and-white...",
+        "description": "Workteams excel with HP's black-and-white office LaserJet printers, which pack extra punch with high-quality results, extra power, and more features."
       },
       {
         "title": "This printer is intended to...",
@@ -3123,7 +3123,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
     "features": [
       {
         "title": "Fast printing that fits anywhere",
-        "description": "Maximize your uptime with print speeds up to 19ppm. A LaserJet so small it can fit almost anywhere. Smartly and elegantly designed, so it’s simple and intuitive to use."
+        "description": "Maximize your uptime with print speeds up to 19ppm. A LaserJet so small it can fit almost anywhere. Smartly and elegantly designed, so it's simple and intuitive to use."
       },
       {
         "title": "Uncompromising quality",
@@ -3366,7 +3366,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Help save time and energy",
-        "description": "Speed through multipage documents with automatic two-sided printing. Wait less with an HP LaserJet Pro MFP that prints up to 30 pages per minute. HP Voice-activated printing—your HP printer works with Amazon Alexa, Google Assistant, Microsoft Cortana. Help save energy with HP Auto-On/Auto-Off Technology."
+        "description": "Speed through multipage documents with automatic two-sided printing. Wait less with an HP LaserJet Pro MFP that prints up to 30 pages per minute. HP Voice-activated printing - your HP printer works with Amazon Alexa, Google Assistant, Microsoft Cortana. Help save energy with HP Auto-On/Auto-Off Technology."
       },
       {
         "title": "Easy mobile printing with HP Smart app",
@@ -3581,7 +3581,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Help save time and energy",
-        "description": "Wait less with an HP LaserJet Pro MFP that prints up to 30 pages per minute. Get quick and easy printing and faxing directly at the control panel. HP Voice-activated printing—your HP printer works with Amazon Alexa, Google Assistant, Microsoft Cortana. Help save energy with HP Auto-On/Auto-Off Technology."
+        "description": "Wait less with an HP LaserJet Pro MFP that prints up to 30 pages per minute. Get quick and easy printing and faxing directly at the control panel. HP Voice-activated printing - your HP printer works with Amazon Alexa, Google Assistant, Microsoft Cortana. Help save energy with HP Auto-On/Auto-Off Technology."
       },
       {
         "title": "Easy mobile printing with HP Smart app",
@@ -4591,11 +4591,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
     "features": [
       {
         "title": "Professional Productivity.",
-        "description": "Scan up to 50 images (25 pages) per minute with a 60-page, two-sided, single-pass document feeder. No need for tech support. USB connectivity provides quick and simple set up and reliable connections. Don’t wait for warm-up—Instant-on Technology lets you begin scanning quickly. Place the scanner where the work happens. With a compact design that fits on the desktop."
+        "description": "Scan up to 50 images (25 pages) per minute with a 60-page, two-sided, single-pass document feeder. No need for tech support. USB connectivity provides quick and simple set up and reliable connections. Don't wait for warm-up - Instant-on Technology lets you begin scanning quickly. Place the scanner where the work happens. With a compact design that fits on the desktop."
       },
       {
         "title": "Easy to use.",
-        "description": "Scan a variety of documents including books, magazines, and ID cards from the ADF or the flatbed. Simplify work processes with pre-configured workflows, and powerful editing tools from HP Scan Pro software. Scan directly to document applications using HP’s full-featured WIA, ISIS and TWAIN support."
+        "description": "Scan a variety of documents including books, magazines, and ID cards from the ADF or the flatbed. Simplify work processes with pre-configured workflows, and powerful editing tools from HP Scan Pro software. Scan directly to document applications using HP's full-featured WIA, ISIS and TWAIN support."
       },
       {
         "title": "Reliable Scanning.",
@@ -5572,13 +5572,11 @@ export const getProductDetailById = (productId: string): ProductDetail => {
     return productDetailsMap[productId];
   }
 
-  // Fallback to finding from allProducts
   const baseProduct = allProducts.find((p) => p.id === productId) || allProducts[0];
   if (productDetailsMap[baseProduct.id]) {
     return productDetailsMap[baseProduct.id];
   }
 
-  // Default fallback
   return {
     ...baseProduct,
     sku: 'HP-DEFAULT',

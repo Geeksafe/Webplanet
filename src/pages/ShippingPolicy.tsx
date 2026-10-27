@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   Truck,
   Calendar,
@@ -30,7 +30,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'shipping-policy' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Order Fulfillment & Delivery"
           titleWhite="Shipping"
@@ -44,7 +43,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <PackageCheck className="w-5 h-5" />,
@@ -62,7 +60,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* 3 Metric Highlight Cards */}
           <LegalMetricCards
             metrics={[
               {
@@ -83,7 +80,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Quick Jump Navigation */}
           <LegalQuickNav
             title="Shipping Policy Sections"
             items={[
@@ -95,9 +91,7 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Structured Policy Sections */}
           <div className="space-y-6">
-            {/* Section 1: Methods & Rates */}
             <div
               id="shipping-methods"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -146,7 +140,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 2: Tracking & Carriers */}
             <div
               id="shipping-tracking"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -166,13 +159,12 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
               </div>
 
               <div className="space-y-3 text-sm text-gray-600 leading-relaxed mb-4">
-                <p>• We partner primarily with <strong>FedEx, UPS, and the United States Postal Service (USPS)</strong> to deliver your merchandise safely.</p>
-                <p>• As soon as your order has been packaged and scanned by the carrier, an automated confirmation email containing your direct tracking link will be dispatched to your email address.</p>
-                <p>• Real-time updates generally become active in the carrier system within 12-24 hours of package handoff.</p>
+                <p>- We partner primarily with <strong>FedEx, UPS, and the United States Postal Service (USPS)</strong> to deliver your merchandise safely.</p>
+                <p>- As soon as your order has been packaged and scanned by the carrier, an automated confirmation email containing your direct tracking link will be dispatched to your email address.</p>
+                <p>- Real-time updates generally become active in the carrier system within 12-24 hours of package handoff.</p>
               </div>
             </div>
 
-            {/* Section 3: Delivery Addresses */}
             <div
               id="shipping-address"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -203,7 +195,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 4: Damaged or Lost Shipments */}
             <div
               id="shipping-damaged"
               className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]"
@@ -227,7 +218,6 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Section 5: Shipping Inquiries (Anchor) */}
             <div id="shipping-support">
               <LegalContactBox
                 title="Questions About Shipping & Tracking?"

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowRight, ShieldCheck, Truck, Headphones } from 'lucide-react';
 
 interface FinalCtaProps {
@@ -8,7 +8,6 @@ interface FinalCtaProps {
 const FinalCta: React.FC<FinalCtaProps> = ({ onNavigate }) => {
   return (
     <section className="relative overflow-hidden py-20 sm:py-24 bg-gradient-to-b from-[#172538] via-[#1f324b] to-[#172538] text-white text-center">
-      {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1240px] mx-auto px-5 sm:px-8 relative z-10">
@@ -22,7 +21,6 @@ const FinalCta: React.FC<FinalCtaProps> = ({ onNavigate }) => {
           Explore our printers, step-by-step setup assistance, and professional troubleshooting services to keep your home and office workflow smooth and productive.
         </p>
 
-        {/* Action Button */}
         <div className="mb-12">
           <button
             type="button"
@@ -34,7 +32,6 @@ const FinalCta: React.FC<FinalCtaProps> = ({ onNavigate }) => {
           </button>
         </div>
 
-        {/* 3 Trust Badges */}
         <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-xs sm:text-sm text-slate-300">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-4 h-4 text-sky-400 shrink-0" />

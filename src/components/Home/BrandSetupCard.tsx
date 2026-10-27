@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { BrandId } from '../BrandSetup';
 
 export interface BrandSetupCardProps {
@@ -41,7 +41,6 @@ const BrandSetupCard: React.FC<BrandSetupCardProps> = ({
 }) => {
   return (
     <div className={className}>
-      {/* Header */}
       <div className="text-center mb-7 sm:mb-8">
         <span className="text-[12px] font-bold tracking-widest text-lightBlue uppercase">
           Printer Setup &amp; Drivers
@@ -54,7 +53,6 @@ const BrandSetupCard: React.FC<BrandSetupCardProps> = ({
         </p>
       </div>
 
-      {/* Brands Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
         {brands.map((brand) => (
           <div

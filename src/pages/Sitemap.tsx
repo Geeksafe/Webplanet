@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   Compass,
   Calendar,
@@ -32,7 +32,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
       <Header onNavigate={onNavigate} currentPage={'sitemap' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Website Directory & Navigation"
           titleWhite="Site"
@@ -46,7 +45,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview */}
           <LegalDualOverview
             cardLeft={{
               icon: <Compass className="w-5 h-5" />,
@@ -64,9 +62,7 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
             }}
           />
 
-          {/* Directory Categorized Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* 1. Main Pages */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
@@ -141,7 +137,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
               </div>
             </div>
 
-            {/* 2. Brand Setups */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
@@ -220,7 +215,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
               </div>
             </div>
 
-            {/* 3. Legal & Policies */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
@@ -285,7 +279,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
               </div>
             </div>
 
-            {/* 4. Popular Hardware */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
@@ -321,7 +314,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
               </div>
             </div>
 
-            {/* 5. Support & Assistance */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
@@ -348,7 +340,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
               </div>
             </div>
 
-            {/* 6. Company Headquarters */}
             <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 mb-4">
@@ -370,7 +361,6 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Have Questions or Need Navigation Help?"
             description="Our customer support desk is ready to assist you with order inquiries, product recommendations, or setup guides."

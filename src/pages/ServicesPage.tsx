@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   Wrench,
   Wifi,
@@ -111,7 +111,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'services' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Expert Printer Solutions"
           titleWhite="Our"
@@ -125,7 +124,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <Wrench className="w-5 h-5" />,
@@ -143,7 +141,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             }}
           />
 
-          {/* 3 Metric Cards */}
           <LegalMetricCards
             metrics={[
               {
@@ -164,7 +161,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             ]}
           />
 
-          {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-xs font-bold text-[#0284c7] uppercase tracking-wider block mb-1">
               What We Offer
@@ -177,7 +173,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          {/* Core Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {SERVICES_LIST.map((srv) => (
               <div
@@ -232,7 +227,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             ))}
           </div>
 
-          {/* Common Issues Handled */}
           <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-10 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] mb-12">
             <div className="max-w-2xl mb-8">
               <span className="text-xs font-bold text-sky-600 uppercase tracking-wider block mb-1">
@@ -256,7 +250,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Simple 3-Step Process */}
           <div className="bg-gradient-to-r from-sky-50 via-slate-50 to-blue-50/70 rounded-2xl p-6 sm:p-8 md:p-10 border border-sky-100 mb-12">
             <div className="text-center max-w-xl mx-auto mb-8">
               <span className="text-xs font-bold text-[#0284c7] uppercase tracking-wider block mb-1">
@@ -311,7 +304,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Need Printer Assistance Today?"
             description="Our friendly Maryland-based team is ready to walk you through setup diagnostics, Wi-Fi pairing, or hardware inquiries."

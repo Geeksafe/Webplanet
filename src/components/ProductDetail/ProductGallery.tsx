@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 interface ProductGalleryProps {
   images: string[];
@@ -12,7 +12,6 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ images, title }) => {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Main Image Frame with Zoom Icon */}
       <div className="relative w-full aspect-square bg-white rounded-lg border border-gray-100 p-8 flex items-center justify-center overflow-hidden group shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <img
           src={activeImage}
@@ -20,7 +19,6 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ images, title }) => {
           className="w-full h-full object-contain select-none transition-transform duration-300 group-hover:scale-105"
         />
 
-        {/* Zoom Icon Button in Top Right */}
         <button
           type="button"
           className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/90 border border-gray-200 text-gray-500 hover:text-black flex items-center justify-center shadow-sm cursor-pointer transition-colors"
@@ -35,7 +33,6 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ images, title }) => {
         </button>
       </div>
 
-      {/* Thumbnails Row */}
       {images.length > 1 && (
         <div className="flex items-center gap-3 overflow-x-auto py-1">
           {images.map((img, idx) => (
