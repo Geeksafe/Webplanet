@@ -28,7 +28,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
         <p className="text-[13px] sm:text-[14px] text-gray-500 font-normal">
           {totalResults > 0 ? (
             <>
-              Showing {startIndex}–{endIndex} of {totalResults} results
+              Showing {startIndex}-{endIndex} of {totalResults} results
             </>
           ) : (
             'No results found'

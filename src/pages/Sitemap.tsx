@@ -334,7 +334,7 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
                 <div className="space-y-3 text-xs sm:text-sm text-gray-600">
                   <p>
                     <strong className="text-gray-900 block">Toll Free Phone:</strong>
-                    <a href="tel:1-833-785-8085" className="text-[#0284c7] font-bold hover:underline">1-833-785-8085</a>
+                    <a href="tel:1-844-883-0609" className="text-[#0284c7] font-bold hover:underline">1-844-883-0609</a>
                   </p>
                   <p>
                     <strong className="text-gray-900 block">Email Support:</strong>
@@ -342,7 +342,7 @@ const Sitemap: React.FC<SitemapProps> = ({ onNavigate, onSelectBrand }) => {
                   </p>
                   <p>
                     <strong className="text-gray-900 block">Operating Hours:</strong>
-                    9:00 AM – 5:00 PM EST (Mon – Fri)
+                    9:00 AM - 5:00 PM EST (Mon - Fri)
                   </p>
                 </div>
               </div>

@@ -10,7 +10,7 @@ const Mission: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-[460px] rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
               <img 
-                src="https://ik.imagekit.io/eqgw1ftw6/Doctor%20Setu/Gemini_Generated_Image_2fp76h2fp76h2fp7.png" 
+                src="/mission-printer.jpg" 
                 alt="Operating printer in modern office" 
                 className="w-full h-auto object-cover select-none block" 
                 loading="lazy"

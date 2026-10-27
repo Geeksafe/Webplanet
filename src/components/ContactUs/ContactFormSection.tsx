@@ -73,7 +73,7 @@ const ContactFormSection: React.FC = () => {
               <Clock className="w-5 h-5 text-[#0284c7] shrink-0" />
               <div>
                 <p className="font-semibold text-gray-900">Office Hours</p>
-                <p className="text-gray-500 text-xs mt-0.5">9 AM to 5 PM (Mon – Fri Only)</p>
+                <p className="text-gray-500 text-xs mt-0.5">9 AM to 5 PM (Mon - Fri Only)</p>
               </div>
             </div>
           </div>

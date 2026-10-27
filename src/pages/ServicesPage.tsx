@@ -120,7 +120,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
           badges={[
             { icon: <Wrench className="w-4 h-4" />, text: "Professional Diagnostics" },
             { icon: <Wifi className="w-4 h-4" />, text: "Wi-Fi & Network Optimization" },
-            { icon: <PhoneCall className="w-4 h-4" />, text: "Toll Free: 1-833-785-8085" },
+            { icon: <PhoneCall className="w-4 h-4" />, text: "Toll Free: 1-844-883-0609" },
           ]}
         />
 
@@ -222,10 +222,10 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   <a
-                    href="tel:1-833-785-8085"
+                    href="tel:1-844-883-0609"
                     className="text-xs font-bold text-gray-500 hover:text-gray-900 no-underline"
                   >
-                    1-833-785-8085
+                    1-844-883-0609
                   </a>
                 </div>
               </div>

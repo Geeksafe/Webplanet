@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="text-base font-bold mb-5 tracking-tight">Quick Links</h4>
             <ul className="list-none space-y-2.5 p-0 m-0">
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('home')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('shop')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('about')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('contact')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -140,8 +140,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <p>3545 Ellicott Mills DR, Ellicott City MD 21043, USA</p>
               <p>
                 Toll Free:{' '}
-                <a href="tel:1-833-785-8085" className="text-white hover:text-sky-300 transition-colors font-semibold">
-                  1-833-785-8085
+                <a href="tel:1-844-883-0609" className="text-white hover:text-sky-300 transition-colors font-semibold">
+                  1-844-883-0609
                 </a>
               </p>
               <p>

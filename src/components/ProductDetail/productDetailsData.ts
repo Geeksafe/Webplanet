@@ -219,7 +219,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Print Cartridges",
-        "value": "2 cartridges (1 Black, 1 Tri-Color) 67 Black Original Ink Cartridge (~120 Pages Yield) – 3YM56AN 67XL Black High Yield Original Ink Cartridge (~240 Pages Yield) – 3YM57AN 67 Tri-Color Original Ink Cartridge (~100 Pages Yield) – 3YM55AN 67XL Tri-Color High-Yield Original Ink Cartridge (~200 Pages Yield) – 3YM58AN"
+        "value": "2 cartridges (1 Black, 1 Tri-Color) 67 Black Original Ink Cartridge (~120 Pages Yield) - 3YM56AN 67XL Black High Yield Original Ink Cartridge (~240 Pages Yield) - 3YM57AN 67 Tri-Color Original Ink Cartridge (~100 Pages Yield) - 3YM55AN 67XL Tri-Color High-Yield Original Ink Cartridge (~200 Pages Yield) - 3YM58AN"
       },
       {
         "category": "What's in the Box",
@@ -273,11 +273,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, Copy, Scan"
       },
       {
-        "category": "Print Speed – Black (ISO, Laser Comparable)",
+        "category": "Print Speed - Black (ISO, Laser Comparable)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Color (ISO, Laser Comparable)",
+        "category": "Print Speed - Color (ISO, Laser Comparable)",
         "value": "Up to 5.5 ppm"
       },
       {
@@ -329,11 +329,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Trays – Standard",
+        "category": "Paper Trays - Standard",
         "value": "1"
       },
       {
-        "category": "Paper Trays – Maximum",
+        "category": "Paper Trays - Maximum",
         "value": "1"
       },
       {
@@ -341,11 +341,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "App Apple AirPrint Chrome OS Mopria-Certified"
       },
       {
-        "category": "Connectivity – Standard",
+        "category": "Connectivity - Standard",
         "value": "1 Hi-Speed USB 2.0 (Device) 1 Wi-Fi 802.11b/g/n"
       },
       {
-        "category": "Memory – Standard",
+        "category": "Memory - Standard",
         "value": "64 MB DDR1"
       },
       {
@@ -361,11 +361,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Handling Input – Standard",
+        "category": "Paper Handling Input - Standard",
         "value": "60-Sheet Input Tray"
       },
       {
-        "category": "Paper Handling Output – Standard",
+        "category": "Paper Handling Output - Standard",
         "value": "25-Sheet Output Tray"
       },
       {
@@ -389,7 +389,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Letter Legal 4 × 6 in 5 × 7 in 8 × 10 in No. 10 Envelopes"
       },
       {
-        "category": "Media Sizes – Custom",
+        "category": "Media Sizes - Custom",
         "value": "3 × 5 to 8.5 × 14 in"
       },
       {
@@ -405,11 +405,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Letter: 16 to 32 lb Envelopes: 20 to 24 lb Cards: Up to 110 lb 4 × 6 Inch Photo Paper: Up to 145 lb"
       },
       {
-        "category": "Scan Resolution – Hardware",
+        "category": "Scan Resolution - Hardware",
         "value": "Up to 1200 × 1200 dpi"
       },
       {
-        "category": "Scan Resolution – Optical",
+        "category": "Scan Resolution - Optical",
         "value": "Up to 1200 dpi"
       },
       {
@@ -421,15 +421,15 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Copy Resolution – Black Text",
+        "category": "Copy Resolution - Black Text",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copy Resolution – Colour Text and Graphics",
+        "category": "Copy Resolution - Colour Text and Graphics",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copies – Maximum",
+        "category": "Copies - Maximum",
         "value": "Up to 9 Copies"
       },
       {
@@ -525,7 +525,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
     "features": [
       {
         "title": "Simple setup with the easiest-to-use print app",
-        "description": "Get started fast by following simple steps on the best and easiest-to-use print app. Easily print shipping labels or your favorite recipies and get a lot from one device – print, scan, and copy. Handle all your printing tasks quickly from the intuitively easy-to-use control panel with buttons. Print, scan, copy, or fax right from your smartphone with the best and easiest-to-use HP app."
+        "description": "Get started fast by following simple steps on the best and easiest-to-use print app. Easily print shipping labels or your favorite recipies and get a lot from one device - print, scan, and copy. Handle all your printing tasks quickly from the intuitively easy-to-use control panel with buttons. Print, scan, copy, or fax right from your smartphone with the best and easiest-to-use HP app."
       },
       {
         "title": "Stay connected with our most reliable Wi-Fi®",
@@ -550,11 +550,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, Copy, Scan"
       },
       {
-        "category": "Print Speed – Black (ISO, Laser Comparable)",
+        "category": "Print Speed - Black (ISO, Laser Comparable)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Color (ISO, Laser Comparable)",
+        "category": "Print Speed - Color (ISO, Laser Comparable)",
         "value": "Up to 5.5 ppm"
       },
       {
@@ -614,11 +614,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Trays – Standard",
+        "category": "Paper Trays - Standard",
         "value": "1"
       },
       {
-        "category": "Paper Trays – Maximum",
+        "category": "Paper Trays - Maximum",
         "value": "1"
       },
       {
@@ -626,7 +626,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "App Apple AirPrint Chrome OS Mopria-Certified"
       },
       {
-        "category": "Connectivity – Standard",
+        "category": "Connectivity - Standard",
         "value": "1 Hi-Speed USB 2.0 (Device) 1 Wi-Fi 802.11b/g/n"
       },
       {
@@ -634,11 +634,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "64 MB DDR1"
       },
       {
-        "category": "Minimum System Requirements – macOS",
+        "category": "Minimum System Requirements - macOS",
         "value": "macOS 10.14 Mojave, 10.15 Catalina, 11 Big Sur, 12 Monterey, 13 Ventura, 14 Sonoma, 15 Sequoia 2 GB HD Internet Required"
       },
       {
-        "category": "Minimum System Requirements – Windows",
+        "category": "Minimum System Requirements - Windows",
         "value": "Windows 10 or 11, 1 GHz 32-bit (x86) or 64-bit (x64) Processor, 2 GB Available Hard Disk Space, Internet Connection, Internet Explorer"
       },
       {
@@ -691,7 +691,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Supported Media Weight",
-        "value": "Letter: 16–32 lb Envelopes: 20–24 lb Cards: Up to 110 lb 4 × 6 in Photo Paper: Up to 145 lb"
+        "value": "Letter: 16-32 lb Envelopes: 20-24 lb Cards: Up to 110 lb 4 × 6 in Photo Paper: Up to 145 lb"
       },
       {
         "category": "Hardware Scan Resolution",
@@ -710,11 +710,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Copy Resolution – Black Text",
+        "category": "Copy Resolution - Black Text",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copy Resolution – Color Text & Graphics",
+        "category": "Copy Resolution - Color Text & Graphics",
         "value": "Up to 300 × 300 dpi"
       },
       {
@@ -727,7 +727,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Power",
-        "value": "100–240 VAC (±10%), 50/60 Hz (±3 Hz), 350mA India: 200–240 VAC (±10%), 50/60 Hz (±3 Hz), 350mA"
+        "value": "100-240 VAC (±10%), 50/60 Hz (±3 Hz), 350mA India: 200-240 VAC (±10%), 50/60 Hz (±3 Hz), 350mA"
       },
       {
         "category": "Power Consumption",
@@ -843,59 +843,59 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Instant Ink Eligible"
       },
       {
-        "category": "Print Speed – Black (ISO)",
+        "category": "Print Speed - Black (ISO)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Black (Draft, Letter)",
+        "category": "Print Speed - Black (Draft, Letter)",
         "value": "Up to 20 ppm"
       },
       {
-        "category": "Print Speed – Black (Draft, A4)",
+        "category": "Print Speed - Black (Draft, A4)",
         "value": "Up to 20 ppm"
       },
       {
-        "category": "Print Speed – Black (ISO, Letter)",
+        "category": "Print Speed - Black (ISO, Letter)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Black (ISO, A4)",
+        "category": "Print Speed - Black (ISO, A4)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Color (ISO)",
+        "category": "Print Speed - Color (ISO)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "Print Speed – Color (Draft, Letter)",
+        "category": "Print Speed - Color (Draft, Letter)",
         "value": "Up to 16 ppm"
       },
       {
-        "category": "Print Speed – Color (Draft, A4)",
+        "category": "Print Speed - Color (Draft, A4)",
         "value": "Up to 16 ppm"
       },
       {
-        "category": "Print Speed – Color (ISO)",
+        "category": "Print Speed - Color (ISO)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "Print Speed Color (ISO)",
+        "category": "Print Speed - Color (ISO)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "First Page Out – Black (Letter, Ready)",
+        "category": "First Page Out - Black (Letter, Ready)",
         "value": "As Fast as 16 sec"
       },
       {
-        "category": "First Page Out – Black (A4, Ready)",
+        "category": "First Page Out - Black (A4, Ready)",
         "value": "As Fast as 16 sec"
       },
       {
-        "category": "First Page Out – Color (Letter, Ready)",
+        "category": "First Page Out - Color (Letter, Ready)",
         "value": "As Fast as 20 sec"
       },
       {
-        "category": "First Page Out – Color (A4, Ready)",
+        "category": "First Page Out - Color (A4, Ready)",
         "value": "As Fast as 20 sec"
       },
       {
@@ -915,11 +915,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "50 to 100 The number of pages printed should not exceed the recommended monthly page volume for optimum device performance."
       },
       {
-        "category": "Print Quality – Black (Best)",
+        "category": "Print Quality - Black (Best)",
         "value": "Up to 1200 × 1200 Rendered dpi"
       },
       {
-        "category": "Print Quality – Color (Best)",
+        "category": "Print Quality - Color (Best)",
         "value": "Up to 4800 × 1200 Optimized dpi Color (When Printing from a Computer on Selected Photo Papers and 1200 Input dpi)"
       },
       {
@@ -931,7 +931,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Thermal Inkjet"
       },
       {
-        "category": "Connectivity – Standard",
+        "category": "Connectivity - Standard",
         "value": "1 Hi-Speed USB 2.0 (Device) Dual Band Wi-Fi"
       },
       {
@@ -987,11 +987,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Windows 11 Windows 10 macOS 13 Ventura macOS 14 Sonoma macOS 15 Sequoia"
       },
       {
-        "category": "Paper Handling Input – Standard",
+        "category": "Paper Handling Input - Standard",
         "value": "60-Sheet Input Tray"
       },
       {
-        "category": "Paper Handling Output – Standard",
+        "category": "Paper Handling Output - Standard",
         "value": "25-Sheet Output Tray"
       },
       {
@@ -1007,7 +1007,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "A4 B5 A6 DL Envelope"
       },
       {
-        "category": "Media Sizes – Custom",
+        "category": "Media Sizes - Custom",
         "value": "76 × 127 to 215 × 355 mm"
       },
       {
@@ -1015,7 +1015,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Media Weight – Recommended",
+        "category": "Media Weight - Recommended",
         "value": "75 g/m²"
       },
       {
@@ -1027,15 +1027,15 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "JPEG TIFF PDF PNG"
       },
       {
-        "category": "Scan Resolution – Optical",
+        "category": "Scan Resolution - Optical",
         "value": "Up to 1200 dpi"
       },
       {
-        "category": "Scan Resolution – Hardware",
+        "category": "Scan Resolution - Hardware",
         "value": "Up to 1200 × 1200 dpi"
       },
       {
-        "category": "Scan Size – Maximum",
+        "category": "Scan Size - Maximum",
         "value": "216 × 297 mm"
       },
       {
@@ -1043,27 +1043,27 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Contact Image Sensor (CIS)"
       },
       {
-        "category": "Copy Speed – Black (ISO)",
+        "category": "Copy Speed - Black (ISO)",
         "value": "Up to 6 cpm"
       },
       {
-        "category": "Copy Speed – Color (ISO)",
+        "category": "Copy Speed - Color (ISO)",
         "value": "Up to 3 cpm"
       },
       {
-        "category": "Copy Resolution – Black Text",
+        "category": "Copy Resolution - Black Text",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copy Resolution – Color Text and Graphics",
+        "category": "Copy Resolution - Color Text and Graphics",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copy Resolution – Black Graphics",
+        "category": "Copy Resolution - Black Graphics",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copies – Maximum",
+        "category": "Copies - Maximum",
         "value": "Up to 9 Copies"
       },
       {
@@ -1135,7 +1135,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "DeskJet 2923 All-in-One 68 Setup Black Cartridge 68 Setup Tri-Color Cartridge Regulatory Flyer Setup Guide Reference Guide Power Cord"
       },
       {
-        "category": "Print Cartridges/Bottle – Number",
+        "category": "Print Cartridges/Bottle - Number",
         "value": "2 (1 Each Black, Tri-Color)"
       },
       {
@@ -1530,35 +1530,35 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, Copy, Scan"
       },
       {
-        "category": "Print Speed – Black (ISO, Laser Comparable)",
+        "category": "Print Speed - Black (ISO, Laser Comparable)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Color (ISO, Laser Comparable)",
+        "category": "Print Speed - Color (ISO, Laser Comparable)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "Print Speed – Black (Draft)",
+        "category": "Print Speed - Black (Draft)",
         "value": "Up to 20 ppm"
       },
       {
-        "category": "Print Speed – Color (Draft)",
+        "category": "Print Speed - Color (Draft)",
         "value": "Up to 16 ppm"
       },
       {
-        "category": "Print Speed – Black (Normal)",
+        "category": "Print Speed - Black (Normal)",
         "value": "Up to 7.5 ppm"
       },
       {
-        "category": "Print Speed – Color (Normal)",
+        "category": "Print Speed - Color (Normal)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "First Page Out (Ready) – Black",
+        "category": "First Page Out (Ready) - Black",
         "value": "As Fast as 16 sec"
       },
       {
-        "category": "First Page Out (Ready) – Color",
+        "category": "First Page Out (Ready) - Color",
         "value": "As Fast as 20 sec"
       },
       {
@@ -1610,11 +1610,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Trays – Standard",
+        "category": "Paper Trays - Standard",
         "value": "1"
       },
       {
-        "category": "Paper Trays – Maximum",
+        "category": "Paper Trays - Maximum",
         "value": "1"
       },
       {
@@ -1622,11 +1622,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "App Apple AirPrint Mopria Print Service Print Service Plugin (Android Printing)"
       },
       {
-        "category": "Connectivity – Standard",
+        "category": "Connectivity - Standard",
         "value": "1 Hi-Speed USB 2.0 (Device) Dual Band Wi-Fi"
       },
       {
-        "category": "Memory – Standard",
+        "category": "Memory - Standard",
         "value": "64 MB DDR1"
       },
       {
@@ -1642,11 +1642,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Handling Input – Standard",
+        "category": "Paper Handling Input - Standard",
         "value": "60-Sheet Input Tray"
       },
       {
-        "category": "Paper Handling Output – Standard",
+        "category": "Paper Handling Output - Standard",
         "value": "25-Sheet Output Tray"
       },
       {
@@ -1670,7 +1670,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Letter Legal 4 × 6 in 5 × 7 in 8 × 10 in No. 10 Envelopes"
       },
       {
-        "category": "Media Sizes – Custom",
+        "category": "Media Sizes - Custom",
         "value": "3 × 5 to 8.5 × 14 in"
       },
       {
@@ -1694,15 +1694,15 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "JPEG TIFF PDF PNG"
       },
       {
-        "category": "Scan Resolution – Hardware",
+        "category": "Scan Resolution - Hardware",
         "value": "Up to 1200 × 1200 dpi"
       },
       {
-        "category": "Scan Resolution – Optical",
+        "category": "Scan Resolution - Optical",
         "value": "Up to 1200 dpi"
       },
       {
-        "category": "Scan Size (Flatbed) – Maximum",
+        "category": "Scan Size (Flatbed) - Maximum",
         "value": "8.5 × 11.69 in"
       },
       {
@@ -1710,15 +1710,15 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Copy Resolution – Black Text",
+        "category": "Copy Resolution - Black Text",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copy Resolution – Colour Text and Graphics",
+        "category": "Copy Resolution - Colour Text and Graphics",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copies – Maximum",
+        "category": "Copies - Maximum",
         "value": "Up to 9 Copies"
       },
       {
@@ -1840,35 +1840,35 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, Copy, Scan"
       },
       {
-        "category": "Print Speed – Black (ISO, Laser Comparable)",
+        "category": "Print Speed - Black (ISO, Laser Comparable)",
         "value": "Up to 8.5 ppm"
       },
       {
-        "category": "Print Speed – Color (ISO, Laser Comparable)",
+        "category": "Print Speed - Color (ISO, Laser Comparable)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "Print Speed – Black (Draft)",
+        "category": "Print Speed - Black (Draft)",
         "value": "Up to 20 ppm"
       },
       {
-        "category": "Print Speed – Color (Draft)",
+        "category": "Print Speed - Color (Draft)",
         "value": "Up to 16 ppm"
       },
       {
-        "category": "Print Speed – Black (Normal)",
+        "category": "Print Speed - Black (Normal)",
         "value": "Up to 8.5 ppm"
       },
       {
-        "category": "Print Speed – Color (Normal)",
+        "category": "Print Speed - Color (Normal)",
         "value": "Up to 5.5 ppm"
       },
       {
-        "category": "First Page Out (Ready) – Black",
+        "category": "First Page Out (Ready) - Black",
         "value": "As Fast as 15 sec"
       },
       {
-        "category": "First Page Out (Ready) – Color",
+        "category": "First Page Out (Ready) - Color",
         "value": "As Fast as 20 sec"
       },
       {
@@ -1920,11 +1920,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Trays – Standard",
+        "category": "Paper Trays - Standard",
         "value": "1"
       },
       {
-        "category": "Paper Trays – Maximum",
+        "category": "Paper Trays - Maximum",
         "value": "1"
       },
       {
@@ -1932,11 +1932,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "App Apple AirPrint Mopria Print Service Print Service Plugin (Android Printing)"
       },
       {
-        "category": "Connectivity – Standard",
+        "category": "Connectivity - Standard",
         "value": "1 Hi-Speed USB 2.0 (Device) Dual Band Wi-Fi"
       },
       {
-        "category": "Memory – Standard",
+        "category": "Memory - Standard",
         "value": "64 MB DDR1"
       },
       {
@@ -1952,11 +1952,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Paper Handling Input – Standard",
+        "category": "Paper Handling Input - Standard",
         "value": "60-Sheet Input Tray"
       },
       {
-        "category": "Paper Handling Output – Standard",
+        "category": "Paper Handling Output - Standard",
         "value": "25-Sheet Output Tray"
       },
       {
@@ -1980,7 +1980,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Letter Legal 4 × 6 in 5 × 7 in 8 × 10 in No. 10 Envelopes"
       },
       {
-        "category": "Media Sizes – Custom",
+        "category": "Media Sizes - Custom",
         "value": "3 × 5 to 8.5 × 14 in"
       },
       {
@@ -2004,19 +2004,19 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "JPEG PDF TIFF PNG"
       },
       {
-        "category": "Scan Resolution – Hardware",
+        "category": "Scan Resolution - Hardware",
         "value": "Up to 1200 × 1200 dpi"
       },
       {
-        "category": "Scan Resolution – Optical",
+        "category": "Scan Resolution - Optical",
         "value": "Up to 1200 dpi"
       },
       {
-        "category": "Scan Size (Flatbed) – Maximum",
+        "category": "Scan Size (Flatbed) - Maximum",
         "value": "8.5 × 11.69 in"
       },
       {
-        "category": "Scan Size (ADF) – Maximum",
+        "category": "Scan Size (ADF) - Maximum",
         "value": "8.5 × 14 in"
       },
       {
@@ -2028,15 +2028,15 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "No"
       },
       {
-        "category": "Copy Resolution – Black Text",
+        "category": "Copy Resolution - Black Text",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copy Resolution – Colour Text and Graphics",
+        "category": "Copy Resolution - Colour Text and Graphics",
         "value": "Up to 300 × 300 dpi"
       },
       {
-        "category": "Copies – Maximum",
+        "category": "Copies - Maximum",
         "value": "Up to 9 Copies"
       },
       {
@@ -2213,7 +2213,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "HP LaserJet Pro 4001dn Printer"
       },
       {
-        "category": "Print Speed – Black (Normal)",
+        "category": "Print Speed - Black (Normal)",
         "value": "Up to 42 ppm"
       },
       {
@@ -2446,7 +2446,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "HP LaserJet Pro 4001dw Printer"
       },
       {
-        "category": "Print Speed – Black (Normal)",
+        "category": "Print Speed - Black (Normal)",
         "value": "Up to 42 ppm"
       },
       {
@@ -2679,7 +2679,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "HP LaserJet Pro 4001n Printer"
       },
       {
-        "category": "Print Speed – Black (Normal)",
+        "category": "Print Speed - Black (Normal)",
         "value": "Up to 42 ppm"
       },
       {
@@ -2913,7 +2913,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print"
       },
       {
-        "category": "Print Speed – Black (normal)",
+        "category": "Print Speed - Black (normal)",
         "value": "Up to 30 ppm"
       },
       {
@@ -3131,7 +3131,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Easy mobile printing and scanning with HP Smart app",
-        "description": "Print from the cloud, scan from your smartphone, and easily order toner with the HP Smart app. Easily print from a variety of smartphones and tablets. Easily share resources – access and print with wireless networking. Connect your smartphone directly to your printer – and easily print without accessing a network."
+        "description": "Print from the cloud, scan from your smartphone, and easily order toner with the HP Smart app. Easily print from a variety of smartphones and tablets. Easily share resources - access and print with wireless networking. Connect your smartphone directly to your printer - and easily print without accessing a network."
       }
     ],
     "specifications": [
@@ -3144,7 +3144,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print"
       },
       {
-        "category": "Print Speed – Black (normal)",
+        "category": "Print Speed - Black (normal)",
         "value": "Up to 19 ppm"
       },
       {
@@ -3277,7 +3277,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Power",
-        "value": "110V – 127V nominal @ +/-10% (min 99V, max 140V), 50 – 60Hz nominal +/- 3Hz (min 47Hz, max 63Hz)"
+        "value": "110V - 127V nominal @ +/-10% (min 99V, max 140V), 50 - 60Hz nominal +/- 3Hz (min 47Hz, max 63Hz)"
       },
       {
         "category": "Power consumption",
@@ -3370,7 +3370,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Easy mobile printing with HP Smart app",
-        "description": "Print and scan from your smartphone, and easily order toner, with the best in class mobile print app, HP Smart. Easily print from a variety of smartphones and tablets. Easily share resources – access and print with wireless networking. Connect your smartphone or tablet directly to your printer – and easily print without accessing a network."
+        "description": "Print and scan from your smartphone, and easily order toner, with the best in class mobile print app, HP Smart. Easily print from a variety of smartphones and tablets. Easily share resources - access and print with wireless networking. Connect your smartphone or tablet directly to your printer - and easily print without accessing a network."
       }
     ],
     "specifications": [
@@ -3383,7 +3383,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, copy, scan"
       },
       {
-        "category": "Print Speed – Black (normal)",
+        "category": "Print Speed - Black (normal)",
         "value": "Up to 30 ppm"
       },
       {
@@ -3585,7 +3585,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Easy mobile printing with HP Smart app",
-        "description": "Print and scan from your smartphone, and easily order toner, with the best in class mobile print app, HP Smart. Easily print from a variety of smartphones and tablets. Easily share resources – access and print with wireless networking. Connect your smartphone or tablet directly to your printer – and easily print without accessing a network."
+        "description": "Print and scan from your smartphone, and easily order toner, with the best in class mobile print app, HP Smart. Easily print from a variety of smartphones and tablets. Easily share resources - access and print with wireless networking. Connect your smartphone or tablet directly to your printer - and easily print without accessing a network."
       }
     ],
     "specifications": [
@@ -3602,7 +3602,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, copy, scan, fax"
       },
       {
-        "category": "Print Speed – Black (normal)",
+        "category": "Print Speed - Black (normal)",
         "value": "Up to 30 ppm"
       },
       {
@@ -3804,7 +3804,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
     "features": [
       {
         "title": "Productivity that fits anywhere",
-        "description": "Easily handle tasks and get a lot from one device – print, scan, and copy. Maximize your uptime with print speeds up to 19 ppm. Easily scan files directly to PDF and email with preloaded business apps. Easily copy both sides of identification cards onto one side of paper."
+        "description": "Easily handle tasks and get a lot from one device - print, scan, and copy. Maximize your uptime with print speeds up to 19 ppm. Easily scan files directly to PDF and email with preloaded business apps. Easily copy both sides of identification cards onto one side of paper."
       },
       {
         "title": "Uncompromising quality",
@@ -3812,7 +3812,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "title": "Easy mobile printing and scanning with HP Smart App",
-        "description": "Print from the cloud, scan from your smartphone, and easily order toner, with the HP Smart App. Easily print from a variety of smartphones and tablets. Easily share resources – access and print with wireless networking. Connect your smartphone directly to your printer – and easily print without accessing a network."
+        "description": "Print from the cloud, scan from your smartphone, and easily order toner, with the HP Smart App. Easily print from a variety of smartphones and tablets. Easily share resources - access and print with wireless networking. Connect your smartphone directly to your printer - and easily print without accessing a network."
       }
     ],
     "specifications": [
@@ -3825,7 +3825,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
         "value": "Print, copy, scan"
       },
       {
-        "category": "Print Speed – Black (normal)",
+        "category": "Print Speed - Black (normal)",
         "value": "Up to 19 ppm"
       },
       {
@@ -3958,7 +3958,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Power",
-        "value": "110V – 127V nominal @ +/-10% (min 99V, max 140V), 50 – 60Hz nominal +/- 3Hz (min 47Hz, max 63Hz)"
+        "value": "110V - 127V nominal @ +/-10% (min 99V, max 140V), 50 - 60Hz nominal +/- 3Hz (min 47Hz, max 63Hz)"
       },
       {
         "category": "Power consumption",
@@ -4168,7 +4168,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Scanner advanced features",
-        "value": "One pass duplex scanning; Multi-feed detection sensor; Configurable Scan shortcuts with HP Scan Premium Software: OCR; Auto exposure; Auto threshold; Auto detect colour; Background smooth/removal; Auto detect size; Straighten content; Enhance content; Auto orient; Multicolour dropout; Edge erase; Blank page options: Delete Blank Page, Blank Page Detection Sensitivity, Zonal Blank Detect; Merge pages; Document separation options: Zonal Text Separation, Barcode Separation, Blank Page Separation, Detect All/ Exclude All Edges Evenly/Exclude Edges Specifically, HP Separator Page Separation, Barcode Settings for Doc Separation, Any Format/Specific Format, Barcode Value, Delete Barcode Separator; Auto Feed; Show Viewer After Scan and Post Scan Operations are: Mark the image for Deletion, Rotate option, Move Left/Right, Create/Delete New Selection, Save as Scan Area, Manual Straighten option, Drag and Crop, Undo Options, image – Basic Zoom Slider, Open in Zoom Window (Zoom, Crop, Rotate); Background Clean-up options: Clean-up Background, Remove: make white, Smooth, make consistent, Remove Holes; Multi-Streaming; Multizone Selection for Zonal OCR, Barcode and QR Code; Multizone options: Ability to select Multiple Zones for OCR/Barcode, File Naming, Folder Naming, Document separation, Capture Metadata; Digital Stamp; PDF options: PDF Security Settings (Applicable for PDF and Searchable PDF), Password Security & Document Permission Settings, PDF – iHQC compression, File Size/Quality Slider, TIFF Compression Options: for Gray or Color: Uncompressed/LZW/Jpeg-Tiff, for BW: Uncompressed/LZW/Tiff G3/Tiff G4; File Name Options: Base Name, Date, Time, Batch Counter, Document Counter, Barcode Value, Zonal Text, File name sequence Settings, If File name already exists Actions – Overwrite/Append Date Time Stamp/Prompt for File Name, Intelligent File Naming; Destinations options: Email (Mail Clients, Save Local Copy Option, Local or NW), Folder, Save Folder path, Show Save as Dialog Box, After Saving the File(s) action, Printer/Fax, Send To multiple Destinations, Custom Destinations, Sub Folder Name by Date of Scan, by Time of Scan, Plugins available if not already included: SMTP, SFTP, Box and Evernote, SharePoint, SharePoint365, Google Drive, Dropbox, OneDrive, One Drive for Business and more..; XML and PDF Metadata; Enable Book Scan (Flatbed); Intelligent Document Classification; Manual Redaction; Vertical Streak Removal/Detection; Multi Document Scanning; Enable Desktop Icons creation for Scan Profiles/Shortcuts; Shortcut Management: Create new Scan Shortcut, Delete, Rename, Move Up/Down, Save/Undo, Restore Defaults-Factory Settings, Import/Export Shortcuts, retrieve shortcuts from Scanner without accessing the software on the PC; Configurable Scan shortcuts as standalone (using only the firmware of the scanner) without using the HP Scan Software: Scan to Computer, E-mail, Network Folder, SharePoint, Scan to USB Drive."
+        "value": "One pass duplex scanning; Multi-feed detection sensor; Configurable Scan shortcuts with HP Scan Premium Software: OCR; Auto exposure; Auto threshold; Auto detect colour; Background smooth/removal; Auto detect size; Straighten content; Enhance content; Auto orient; Multicolour dropout; Edge erase; Blank page options: Delete Blank Page, Blank Page Detection Sensitivity, Zonal Blank Detect; Merge pages; Document separation options: Zonal Text Separation, Barcode Separation, Blank Page Separation, Detect All/ Exclude All Edges Evenly/Exclude Edges Specifically, HP Separator Page Separation, Barcode Settings for Doc Separation, Any Format/Specific Format, Barcode Value, Delete Barcode Separator; Auto Feed; Show Viewer After Scan and Post Scan Operations are: Mark the image for Deletion, Rotate option, Move Left/Right, Create/Delete New Selection, Save as Scan Area, Manual Straighten option, Drag and Crop, Undo Options, image - Basic Zoom Slider, Open in Zoom Window (Zoom, Crop, Rotate); Background Clean-up options: Clean-up Background, Remove: make white, Smooth, make consistent, Remove Holes; Multi-Streaming; Multizone Selection for Zonal OCR, Barcode and QR Code; Multizone options: Ability to select Multiple Zones for OCR/Barcode, File Naming, Folder Naming, Document separation, Capture Metadata; Digital Stamp; PDF options: PDF Security Settings (Applicable for PDF and Searchable PDF), Password Security & Document Permission Settings, PDF - iHQC compression, File Size/Quality Slider, TIFF Compression Options: for Gray or Color: Uncompressed/LZW/Jpeg-Tiff, for BW: Uncompressed/LZW/Tiff G3/Tiff G4; File Name Options: Base Name, Date, Time, Batch Counter, Document Counter, Barcode Value, Zonal Text, File name sequence Settings, If File name already exists Actions - Overwrite/Append Date Time Stamp/Prompt for File Name, Intelligent File Naming; Destinations options: Email (Mail Clients, Save Local Copy Option, Local or NW), Folder, Save Folder path, Show Save as Dialog Box, After Saving the File(s) action, Printer/Fax, Send To multiple Destinations, Custom Destinations, Sub Folder Name by Date of Scan, by Time of Scan, Plugins available if not already included: SMTP, SFTP, Box and Evernote, SharePoint, SharePoint365, Google Drive, Dropbox, OneDrive, One Drive for Business and more..; XML and PDF Metadata; Enable Book Scan (Flatbed); Intelligent Document Classification; Manual Redaction; Vertical Streak Removal/Detection; Multi Document Scanning; Enable Desktop Icons creation for Scan Profiles/Shortcuts; Shortcut Management: Create new Scan Shortcut, Delete, Rename, Move Up/Down, Save/Undo, Restore Defaults-Factory Settings, Import/Export Shortcuts, retrieve shortcuts from Scanner without accessing the software on the PC; Configurable Scan shortcuts as standalone (using only the firmware of the scanner) without using the HP Scan Software: Scan to Computer, E-mail, Network Folder, SharePoint, Scan to USB Drive."
       },
       {
         "category": "Compatible Operating Systems",
@@ -4224,7 +4224,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Power consumption",
-        "value": "23.9 watts (Active – Scanning), 7 watts (Ready), 2 watts (Sleep), 0.06 (Auto-Off), 0.06 (Manual-Off) (Power requirements are based on the country or region where the product is sold. Do not convert operating voltages or use with other voltages. Doing so might cause damage that would not be covered under HP product warranty.)"
+        "value": "23.9 watts (Active - Scanning), 7 watts (Ready), 2 watts (Sleep), 0.06 (Auto-Off), 0.06 (Manual-Off) (Power requirements are based on the country or region where the product is sold. Do not convert operating voltages or use with other voltages. Doing so might cause damage that would not be covered under HP product warranty.)"
       },
       {
         "category": "Control panel",
@@ -4463,7 +4463,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Compatible Operating Systems",
-        "value": "Windows 11, Windows 10, Windows 8.1, Windows 7, macOS 10.13–10.15, Linux and Citrix"
+        "value": "Windows 11, Windows 10, Windows 8.1, Windows 7, macOS 10.13-10.15, Linux and Citrix"
       },
       {
         "category": "Mac Compatible",
@@ -4495,11 +4495,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Input Voltage",
-        "value": "90–264 VAC"
+        "value": "90-264 VAC"
       },
       {
         "category": "Frequency",
-        "value": "50–60 Hz"
+        "value": "50-60 Hz"
       },
       {
         "category": "Power Consumption",
@@ -4511,23 +4511,23 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Operating Humidity",
-        "value": "10–80% RH"
+        "value": "10-80% RH"
       },
       {
         "category": "Recommended Humidity",
-        "value": "30–70% RH"
+        "value": "30-70% RH"
       },
       {
         "category": "Operating Temperature",
-        "value": "10–35°C"
+        "value": "10-35°C"
       },
       {
         "category": "Recommended Temperature",
-        "value": "17.5–25°C"
+        "value": "17.5-25°C"
       },
       {
         "category": "Storage Temperature",
-        "value": "-40–60°C"
+        "value": "-40-60°C"
       },
       {
         "category": "Acoustic Power Emission",
@@ -4856,11 +4856,11 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Input Voltage",
-        "value": "220–240 VAC"
+        "value": "220-240 VAC"
       },
       {
         "category": "Rated Frequency",
-        "value": "50–60 Hz"
+        "value": "50-60 Hz"
       },
       {
         "category": "Power Supply Type",
@@ -5106,7 +5106,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Scanner advanced features",
-        "value": "One pass duplex scanning; Multi-feed detection sensor; Configurable Scan shortcuts with HP Scan (included): OCR; Auto exposure; Auto threshold; Auto detect colour; Background smooth/removal; Auto detect size; Straighten content; Enhance content; Auto orient; Multicolour dropout; Edge erase; Blank page options: Delete Blank Page, Blank Page Detection Sensitivity, Zonal Blank Detect; Merge pages; Document separation options: Zonal Text Separation, Barcode Separation, Blank Page Separation (Front/Back/Both/Any side selection), Add Page Separator Manually; Auto Feed; Show Viewer After Scan and Post Scan Operations are: Mark the image for Deletion, Rotate option, Move Left/Right, Create/Delete New Selection, Save as Scan Area, Manual Straighten option, Drag and Crop, Undo Options, image – Basic Zoom Slider, Open in Zoom Window (Zoom, Crop, Rotate); Background Clean-up options: Clean-up Background, Remove: make white, Smooth: make consistent, Remove Holes, Multi-Streaming; Single zone Selection for Zonal OCR, Barcode and QR Code; PDF options: PDF Security Settings (Applicable for PDF and Searchable PDF), Password Security & Document Permission Settings, PDF – iHQC compression, File Size/Quality Slider; TIFF Compression Options: for Gray or Color: Uncompressed/LZW/Jpeg-Tiff, for BW: Uncompressed/LZW/Tiff G3/Tiff G4; File Name Options: Base Name, Date, Time, Document Counter, Barcode Value, Zonal Text, File name sequence Settings, If File name already exists Actions – Overwrite/Append Date Time Stamp/Prompt for File Name, Intelligent File Naming; Destinations options: Email (Mail Clients, Save Local Copy Option, Local or NW), Folder, Save Folder path, Show Save as Dialog Box, After Saving the File(s) action, Printer/Fax, Plugins available if not already included: SMTP, SFTP, Box and Evernote, SharePoint, SharePoint365, Google Drive, Dropbox, OneDrive, One Drive for Business and more..; Enable Book Scan (Flatbed); Vertical Streak Removal/Detection; Multi Document Scanning; Enable Desktop Icons creation for Scan Profiles/Shortcuts; Shortcut Management: Create new Scan Shortcut, Delete Shortcut, Rename Shortcut, Shortcut Move Up/Down, Shortcut – Save/Undo, Restore Shortcut Defaults-Factory Settings, Import/Export Shortcut; retrieve shortcuts from Scanner without accessing the software on the PC"
+        "value": "One pass duplex scanning; Multi-feed detection sensor; Configurable Scan shortcuts with HP Scan (included): OCR; Auto exposure; Auto threshold; Auto detect colour; Background smooth/removal; Auto detect size; Straighten content; Enhance content; Auto orient; Multicolour dropout; Edge erase; Blank page options: Delete Blank Page, Blank Page Detection Sensitivity, Zonal Blank Detect; Merge pages; Document separation options: Zonal Text Separation, Barcode Separation, Blank Page Separation (Front/Back/Both/Any side selection), Add Page Separator Manually; Auto Feed; Show Viewer After Scan and Post Scan Operations are: Mark the image for Deletion, Rotate option, Move Left/Right, Create/Delete New Selection, Save as Scan Area, Manual Straighten option, Drag and Crop, Undo Options, image - Basic Zoom Slider, Open in Zoom Window (Zoom, Crop, Rotate); Background Clean-up options: Clean-up Background, Remove: make white, Smooth: make consistent, Remove Holes, Multi-Streaming; Single zone Selection for Zonal OCR, Barcode and QR Code; PDF options: PDF Security Settings (Applicable for PDF and Searchable PDF), Password Security & Document Permission Settings, PDF - iHQC compression, File Size/Quality Slider; TIFF Compression Options: for Gray or Color: Uncompressed/LZW/Jpeg-Tiff, for BW: Uncompressed/LZW/Tiff G3/Tiff G4; File Name Options: Base Name, Date, Time, Document Counter, Barcode Value, Zonal Text, File name sequence Settings, If File name already exists Actions - Overwrite/Append Date Time Stamp/Prompt for File Name, Intelligent File Naming; Destinations options: Email (Mail Clients, Save Local Copy Option, Local or NW), Folder, Save Folder path, Show Save as Dialog Box, After Saving the File(s) action, Printer/Fax, Plugins available if not already included: SMTP, SFTP, Box and Evernote, SharePoint, SharePoint365, Google Drive, Dropbox, OneDrive, One Drive for Business and more..; Enable Book Scan (Flatbed); Vertical Streak Removal/Detection; Multi Document Scanning; Enable Desktop Icons creation for Scan Profiles/Shortcuts; Shortcut Management: Create new Scan Shortcut, Delete Shortcut, Rename Shortcut, Shortcut Move Up/Down, Shortcut - Save/Undo, Restore Shortcut Defaults-Factory Settings, Import/Export Shortcut; retrieve shortcuts from Scanner without accessing the software on the PC"
       },
       {
         "category": "Compatible Operating Systems",
@@ -5154,7 +5154,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Power consumption",
-        "value": "13.31 watts (Active – Scanning), 5.31 watts (Ready), 1.23 watts (Sleep), 0.07 (Auto-Off), 0.07 (Manual-Off) (Power requirements are based on the country/region where the printer is sold. Do not convert operating voltages. This will damage the printer and void the product warranty.)"
+        "value": "13.31 watts (Active - Scanning), 5.31 watts (Ready), 1.23 watts (Sleep), 0.07 (Auto-Off), 0.07 (Manual-Off) (Power requirements are based on the country/region where the printer is sold. Do not convert operating voltages. This will damage the printer and void the product warranty.)"
       },
       {
         "category": "Control panel",
@@ -5408,7 +5408,7 @@ export const productDetailsMap: Record<string, ProductDetail> = {
       },
       {
         "category": "Scanner advanced features",
-        "value": "One pass duplex scanning; Multi-feed detection sensor; Configurable Scan shortcuts with HP Scan (included): OCR; Auto exposure; Auto threshold; Auto detect colour; Background smooth/removal; Auto detect size; Straighten content; Enhance content; Auto orient; Multicolour dropout; Edge erase; Blank page options: Delete Blank Page, Blank Page Detection Sensitivity, Zonal Blank Detect; Merge pages; Document separation options: Zonal Text Separation, Barcode Separation, Blank Page Separation (Front/Back/Both/Any side selection), Add Page Separator Manually; Auto Feed; Show Viewer After Scan and Post Scan Operations are: Mark the image for Deletion, Rotate option, Move Left/Right, Create/Delete New Selection, Save as Scan Area, Manual Straighten option, Drag and Crop, Undo Options, image – Basic Zoom Slider, Open in Zoom Window (Zoom, Crop, Rotate); Background Clean-up options: Clean-up Background, Remove: make white, Smooth: make consistent, Remove Holes, Multi-Streaming; Single zone Selection for Zonal OCR, Barcode and QR Code; PDF options: PDF Security Settings (Applicable for PDF and Searchable PDF), Password Security & Document Permission Settings, PDF – iHQC compression, File Size/Quality Slider; TIFF Compression Options: for Gray or Color: Uncompressed/LZW/Jpeg-Tiff, for BW: Uncompressed/LZW/Tiff G3/Tiff G4; File Name Options: Base Name, Date, Time, Document Counter, Barcode Value, Zonal Text, File name sequence Settings, If File name already exists Actions – Overwrite/Append Date Time Stamp/Prompt for File Name, Intelligent File Naming; Destinations options: Email (Mail Clients, Save Local Copy Option, Local or NW), Folder, Save Folder path, Show Save as Dialog Box, After Saving the File(s) action, Printer/Fax, Plugins available if not already included: SMTP, SFTP, Box and Evernote, SharePoint, SharePoint365, Google Drive, Dropbox, OneDrive, One Drive for Business and more; Enable Book Scan (Flatbed); Vertical Streak Removal/Detection; Multi Document Scanning; Enable Desktop Icons creation for Scan Profiles/Shortcuts; Shortcut Management: Create new Scan Shortcut, Delete Shortcut, Rename Shortcut, Shortcut Move Up/Down, Shortcut – Save/Undo, Restore Shortcut Defaults-Factory Settings, Import/Export Shortcut; retrieve shortcuts from Scanner without accessing the software on the PC; Configurable Scan shortcuts as standalone (using only the firmware of the scanner) without using the HP Scan Software: Scan to Computer, E-mail, Network Folder, SharePoint, Scan to USB Drive"
+        "value": "One pass duplex scanning; Multi-feed detection sensor; Configurable Scan shortcuts with HP Scan (included): OCR; Auto exposure; Auto threshold; Auto detect colour; Background smooth/removal; Auto detect size; Straighten content; Enhance content; Auto orient; Multicolour dropout; Edge erase; Blank page options: Delete Blank Page, Blank Page Detection Sensitivity, Zonal Blank Detect; Merge pages; Document separation options: Zonal Text Separation, Barcode Separation, Blank Page Separation (Front/Back/Both/Any side selection), Add Page Separator Manually; Auto Feed; Show Viewer After Scan and Post Scan Operations are: Mark the image for Deletion, Rotate option, Move Left/Right, Create/Delete New Selection, Save as Scan Area, Manual Straighten option, Drag and Crop, Undo Options, image - Basic Zoom Slider, Open in Zoom Window (Zoom, Crop, Rotate); Background Clean-up options: Clean-up Background, Remove: make white, Smooth: make consistent, Remove Holes, Multi-Streaming; Single zone Selection for Zonal OCR, Barcode and QR Code; PDF options: PDF Security Settings (Applicable for PDF and Searchable PDF), Password Security & Document Permission Settings, PDF - iHQC compression, File Size/Quality Slider; TIFF Compression Options: for Gray or Color: Uncompressed/LZW/Jpeg-Tiff, for BW: Uncompressed/LZW/Tiff G3/Tiff G4; File Name Options: Base Name, Date, Time, Document Counter, Barcode Value, Zonal Text, File name sequence Settings, If File name already exists Actions - Overwrite/Append Date Time Stamp/Prompt for File Name, Intelligent File Naming; Destinations options: Email (Mail Clients, Save Local Copy Option, Local or NW), Folder, Save Folder path, Show Save as Dialog Box, After Saving the File(s) action, Printer/Fax, Plugins available if not already included: SMTP, SFTP, Box and Evernote, SharePoint, SharePoint365, Google Drive, Dropbox, OneDrive, One Drive for Business and more; Enable Book Scan (Flatbed); Vertical Streak Removal/Detection; Multi Document Scanning; Enable Desktop Icons creation for Scan Profiles/Shortcuts; Shortcut Management: Create new Scan Shortcut, Delete Shortcut, Rename Shortcut, Shortcut Move Up/Down, Shortcut - Save/Undo, Restore Shortcut Defaults-Factory Settings, Import/Export Shortcut; retrieve shortcuts from Scanner without accessing the software on the PC; Configurable Scan shortcuts as standalone (using only the firmware of the scanner) without using the HP Scan Software: Scan to Computer, E-mail, Network Folder, SharePoint, Scan to USB Drive"
       },
       {
         "category": "Compatible Operating Systems",

@@ -65,7 +65,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Orders & Shipping',
     question: 'How can I check my printer order and shipping status?',
     answer:
-      'Direct carrier tracking links from FedEx, UPS, or USPS are emailed automatically as soon as your printer is dispatched from our warehouse. You can also reach our customer support desk at 1-833-785-8085 or email support@geeksafeglobal.com with your order number for an immediate status update.',
+      'Direct carrier tracking links from FedEx, UPS, or USPS are emailed automatically as soon as your printer is dispatched from our warehouse. You can also reach our customer support desk at 1-844-883-0609 or email support@geeksafeglobal.com with your order number for an immediate status update.',
   },
   {
     id: 'orders-timeline',
@@ -73,7 +73,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Orders & Shipping',
     question: 'What are your delivery times and shipping rates?',
     answer:
-      'Orders placed before 2:00 PM EST on business days are processed within 24–48 hours. Standard Ground shipping takes 3–5 business days and is FREE on all orders over $50 ($9.95 flat rate otherwise). Expedited 2-day delivery is also available at checkout.',
+      'Orders placed before 2:00 PM EST on business days are processed within 24-48 hours. Standard Ground shipping takes 3-5 business days and is FREE on all orders over $50 ($9.95 flat rate otherwise). Expedited 2-day delivery is also available at checkout.',
   },
   {
     id: 'orders-change',
@@ -81,7 +81,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Orders & Shipping',
     question: 'Can I modify or cancel my order after it has been placed?',
     answer:
-      'If your order has not yet been processed by our warehouse, we can assist with address updates or cancellations. Please call our Toll Free support line at 1-833-785-8085 immediately with your order number.',
+      'If your order has not yet been processed by our warehouse, we can assist with address updates or cancellations. Please call our Toll Free support line at 1-844-883-0609 immediately with your order number.',
   },
 
   // Returns & Refunds
@@ -99,7 +99,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Returns & Refunds',
     question: 'How long does it take to receive my refund?',
     answer:
-      'Once our returns department in Ellicott City, MD inspects the returned merchandise (within 48 hours of arrival), your refund is issued directly to your original payment method. Funds generally appear in your account within 5–7 business days.',
+      'Once our returns department in Ellicott City, MD inspects the returned merchandise (within 48 hours of arrival), your refund is issued directly to your original payment method. Funds generally appear in your account within 5-7 business days.',
   },
   {
     id: 'returns-ink',
@@ -185,7 +185,7 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
               tag: "One-on-One Assistance",
               title: "Dedicated Help Desk",
               description:
-                "Need personal guidance? Our Maryland-based customer care center is open Monday through Friday, 9:00 AM to 5:00 PM EST via Toll Free 1-833-785-8085.",
+                "Need personal guidance? Our Maryland-based customer care center is open Monday through Friday, 9:00 AM to 5:00 PM EST via Toll Free 1-844-883-0609.",
             }}
           />
 
@@ -225,11 +225,10 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
                   key={cat.id}
                   type="button"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-[13px] font-semibold transition-all cursor-pointer border ${
-                    activeCategory === cat.id
+                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-[13px] font-semibold transition-all cursor-pointer border ${activeCategory === cat.id
                       ? 'bg-[#0284c7] text-white border-[#0284c7] shadow-xs'
                       : 'bg-slate-50 text-gray-600 hover:text-gray-900 border-slate-200/80 hover:bg-slate-100'
-                  }`}
+                    }`}
                 >
                   {cat.icon}
                   <span>{cat.label}</span>
@@ -246,11 +245,10 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
                 return (
                   <div
                     key={faq.id}
-                    className={`rounded-2xl transition-all border ${
-                      isOpen
+                    className={`rounded-2xl transition-all border ${isOpen
                         ? 'bg-white border-sky-200 shadow-[0_4px_24px_-6px_rgba(2,132,199,0.12)]'
                         : 'bg-white border-slate-200/80 hover:border-slate-300 shadow-xs'
-                    }`}
+                      }`}
                   >
                     <button
                       type="button"
@@ -266,11 +264,10 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
                         </h2>
                       </div>
                       <div
-                        className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                          isOpen
+                        className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 ${isOpen
                             ? 'bg-sky-50 text-[#0284c7] rotate-180'
                             : 'bg-slate-100 text-gray-400'
-                        }`}
+                          }`}
                       >
                         <ChevronDown className="w-4 h-4" />
                       </div>

@@ -58,7 +58,7 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
               tag: "Nationwide Fulfillment",
               title: "Rapid Dispatch & Tracking",
               description:
-                "Orders placed on business days before 2:00 PM EST are processed, verified, and staged for carrier handoff within 24–48 hours.",
+                "Orders placed on business days before 2:00 PM EST are processed, verified, and staged for carrier handoff within 24-48 hours.",
             }}
           />
 
@@ -122,7 +122,7 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
                     <span>Standard Ground</span>
                     <span className="text-emerald-600 font-extrabold text-xs">FREE &gt;$50</span>
                   </div>
-                  <p className="text-xs text-gray-500 mb-2">3–5 business days transit time.</p>
+                  <p className="text-xs text-gray-500 mb-2">3-5 business days transit time.</p>
                   <span className="text-[11px] text-gray-400">$9.95 flat rate for orders under $50.</span>
                 </div>
 
@@ -140,7 +140,7 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
                     <span>Heavy Freight Delivery</span>
                     <span className="text-slate-700 font-extrabold text-xs">Oversized</span>
                   </div>
-                  <p className="text-xs text-gray-500 mb-2">5–7 business days with lift-gate.</p>
+                  <p className="text-xs text-gray-500 mb-2">5-7 business days with lift-gate.</p>
                   <span className="text-[11px] text-gray-400">For enterprise commercial laser printers.</span>
                 </div>
               </div>
@@ -168,7 +168,7 @@ const ShippingPolicy: React.FC<ShippingPolicyProps> = ({ onNavigate }) => {
               <div className="space-y-3 text-sm text-gray-600 leading-relaxed mb-4">
                 <p>• We partner primarily with <strong>FedEx, UPS, and the United States Postal Service (USPS)</strong> to deliver your merchandise safely.</p>
                 <p>• As soon as your order has been packaged and scanned by the carrier, an automated confirmation email containing your direct tracking link will be dispatched to your email address.</p>
-                <p>• Real-time updates generally become active in the carrier system within 12–24 hours of package handoff.</p>
+                <p>• Real-time updates generally become active in the carrier system within 12-24 hours of package handoff.</p>
               </div>
             </div>
 

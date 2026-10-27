@@ -30,7 +30,7 @@ const LegalContactBox: React.FC<LegalContactBoxProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           {/* Phone */}
           <a
-            href="tel:1-833-785-8085"
+            href="tel:1-844-883-0609"
             className="flex items-center gap-4 p-4 sm:p-5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-all text-white no-underline group"
           >
             <div className="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
@@ -41,7 +41,7 @@ const LegalContactBox: React.FC<LegalContactBoxProps> = ({
                 Toll Free Phone
               </span>
               <span className="text-base sm:text-lg font-bold text-white group-hover:text-sky-200 transition-colors">
-                1-833-785-8085
+                1-844-883-0609
               </span>
             </div>
           </a>

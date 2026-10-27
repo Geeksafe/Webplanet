@@ -281,7 +281,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
               </p>
 
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-xs text-gray-600 leading-relaxed">
-                To submit a privacy or data request, please email our privacy team at <a href="mailto:support@geeksafeglobal.com" className="font-bold text-[#0284c7] hover:underline">support@geeksafeglobal.com</a> or call Toll Free <a href="tel:1-833-785-8085" className="font-bold text-[#0284c7] hover:underline">1-833-785-8085</a>.
+                To submit a privacy or data request, please email our privacy team at <a href="mailto:support@geeksafeglobal.com" className="font-bold text-[#0284c7] hover:underline">support@geeksafeglobal.com</a> or call Toll Free <a href="tel:1-844-883-0609" className="font-bold text-[#0284c7] hover:underline">1-844-883-0609</a>.
               </div>
             </div>
           </div>

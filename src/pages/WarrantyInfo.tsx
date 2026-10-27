@@ -52,7 +52,7 @@ const WarrantyInfo: React.FC<WarrantyInfoProps> = ({ onNavigate }) => {
                 <div className="space-y-1">
                   <p>3545 Ellicott Mills DR, Ellicott City MD 21043, USA</p>
                   <p>Email: <span className="text-[#0284c7] font-semibold">support@geeksafeglobal.com</span></p>
-                  <p>Phone: <span className="text-gray-900 font-bold">1-833-785-8085</span></p>
+                  <p>Phone: <span className="text-gray-900 font-bold">1-844-883-0609</span></p>
                 </div>
               ),
             }}

@@ -27,9 +27,9 @@ const ContactCards: React.FC = () => {
               href="tel:+18337858085"
               className="text-xs sm:text-sm text-gray-600 hover:text-[#0284c7] transition-colors"
             >
-              1-833-785-8085
+              1-844-883-0609
             </a>
-            {/* <span className="text-[11px] text-gray-400 mt-0.5">Toll Free: 1-833-785-8085</span> */}
+            {/* <span className="text-[11px] text-gray-400 mt-0.5">Toll Free: 1-844-883-0609</span> */}
           </div>
 
           {/* Card 2: Email */}
@@ -54,8 +54,8 @@ const ContactCards: React.FC = () => {
             </div>
             <h3 className="font-bold text-[#111827] text-base mb-1.5">Office</h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-snug">
-              3545 Ellicott Mills DR, 
-              <br />Ellicott City MD 21043, USA            
+              3545 Ellicott Mills DR,
+              <br />Ellicott City MD 21043, USA
             </p>
             {/* <span className="text-[11px] text-gray-400 mt-0.5">3545 Ellicott Mills DR, Ellicott City MD 21043</span> */}
           </div>

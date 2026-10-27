@@ -30,7 +30,7 @@ export const brandSetupConfigs: Record<BrandId, BrandSetupConfig> = {
     ],
     softwareName: 'HP Smart',
     downloadPrinterImage: '/setup/download_printer_chart.png',
-    supportPhone: '1-833-785-8085',
+    supportPhone: '1-844-883-0609',
     brandColor: '#0085d0'
   },
   canon: {
@@ -62,7 +62,7 @@ export const brandSetupConfigs: Record<BrandId, BrandSetupConfig> = {
     ],
     softwareName: 'Canon PRINT',
     downloadPrinterImage: '/setup/canon_content.png',
-    supportPhone: '1-833-785-8085',
+    supportPhone: '1-844-883-0609',
     brandColor: '#c4161c'
   },
   brother: {
@@ -92,7 +92,7 @@ export const brandSetupConfigs: Record<BrandId, BrandSetupConfig> = {
     ],
     softwareName: 'Brother iPrint&Scan',
     downloadPrinterImage: '/setup/brother_content.png',
-    supportPhone: '1-833-785-8085',
+    supportPhone: '1-844-883-0609',
     brandColor: '#002b66'
   },
   epson: {
@@ -122,7 +122,7 @@ export const brandSetupConfigs: Record<BrandId, BrandSetupConfig> = {
     ],
     softwareName: 'Epson Smart Panel',
     downloadPrinterImage: '/setup/epson_hero.png',
-    supportPhone: '1-833-785-8085',
+    supportPhone: '1-844-883-0609',
     brandColor: '#0f265c'
   }
 };

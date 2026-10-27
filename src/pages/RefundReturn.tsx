@@ -235,7 +235,7 @@ const RefundReturn: React.FC<RefundReturnProps> = ({ onNavigate }) => {
               </div>
 
               <div className="p-4 sm:p-5 rounded-xl bg-emerald-50/70 border border-emerald-100 text-emerald-950 text-xs sm:text-sm leading-relaxed">
-                <strong>Processing Timeline:</strong> Please allow about <strong>5–7 business days</strong> after our facility receives the item for the refund to be processed. Your financial institution may require an additional 2–3 business days to post the balance to your credit statement.
+                <strong>Processing Timeline:</strong> Please allow about <strong>5-7 business days</strong> after our facility receives the item for the refund to be processed. Your financial institution may require an additional 2-3 business days to post the balance to your credit statement.
               </div>
             </div>
 
