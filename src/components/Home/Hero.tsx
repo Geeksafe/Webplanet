@@ -7,7 +7,7 @@ interface HeroProps {
   onSelectBrand?: (brand: BrandId) => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onNavigate, onSelectBrand }) => {
+const Hero: React.FC<HeroProps> = ({ onNavigate: _onNavigate, onSelectBrand }) => {
   const [isBrandModalOpen, setIsBrandModalOpen] = useState(false);
 
   useEffect(() => {
