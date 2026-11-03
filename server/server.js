@@ -240,6 +240,7 @@ app.post('/api/send-email', rateLimiter, async (req, res) => {
       success: false,
       message:
         'Failed to deliver email through mail server. Please try again or reach out directly.',
+      technicalError: error.message,
     });
   }
 });
