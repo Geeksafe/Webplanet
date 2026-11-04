@@ -14,8 +14,7 @@ export interface EmailServiceResponse {
 }
 
 const BACKEND_API_URL =
-  (import.meta.env.VITE_BACKEND_API_URL as string | undefined) ||
-  'http://localhost:5000/api/send-email';
+  'https://123-printshop.store/api/send-email';
 
 /**
  * Universal email dispatch service.
