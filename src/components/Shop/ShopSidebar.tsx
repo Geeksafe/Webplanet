@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { bestSellers } from './productsData';
 
 interface ShopSidebarProps {
@@ -40,7 +40,6 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
 
   return (
     <aside className="w-full lg:w-[320px] shrink-0 flex flex-col gap-6">
-      {/* 1. SEARCH WIDGET */}
       <div className="bg-white rounded-lg border border-gray-200/80 p-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <form onSubmit={handleSearchSubmit} className="flex items-center">
           <input
@@ -62,13 +61,11 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
         </form>
       </div>
 
-      {/* 2. FILTER BY PRICE WIDGET */}
       <div className="bg-white rounded-lg border border-gray-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <h3 className="text-[15px] font-bold text-gray-900 mb-4">
           Filter by Price
         </h3>
 
-        {/* Dual slider representation */}
         <div className="relative mb-5 flex items-center h-5">
           <div className="w-full h-1 bg-gray-200 rounded-full relative pointer-events-none">
             <div 
@@ -95,12 +92,11 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
             FILTER
           </button>
           <span className="text-[12px] text-gray-600 font-medium">
-            Price: ${priceRange[0]} — ${maxPrice.toLocaleString()}
+            Price: ${priceRange[0]} -  ${maxPrice.toLocaleString()}
           </span>
         </div>
       </div>
 
-      {/* 3. CATEGORIES WIDGET */}
       <div className="bg-white rounded-lg border border-gray-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-[15px] font-bold text-gray-900">
@@ -153,7 +149,6 @@ const ShopSidebar: React.FC<ShopSidebarProps> = ({
         </ul>
       </div>
 
-      {/* 4. OUR BEST SELLERS WIDGET */}
       <div className="bg-white rounded-lg border border-gray-200/80 p-5 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
         <h3 className="text-[15px] font-bold text-gray-900 mb-4">
           Our Best Sellers

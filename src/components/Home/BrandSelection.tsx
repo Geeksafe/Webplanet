@@ -7,16 +7,11 @@ interface BrandSelectionProps {
   onSelectProduct?: (productId: string) => void;
 }
 
-// Curated 8 popular featured products representing both Home/Office & Enterprise printers
 const featuredIds = [
   'hp-deskjet-2825e-all-in-one-printer',
   'hp-deskjet-2855e-all-in-one-printer',
   'hp-deskjet-2925-all-in-one-printer',
   'hp-deskjet-4355-all-in-one-printer',
-  // 'hp-laserjet-pro-4001dn-printer',
-  // 'hp-laserjet-pro-4001dw-printer',
-  // 'hp-laserjet-pro-4001n-printer',
-  // 'hp-laserjet-pro-m118dw-printer',
 ];
 
 const featuredProducts = featuredIds
@@ -27,7 +22,6 @@ const BrandSelection: React.FC<BrandSelectionProps> = ({ onNavigate, onSelectPro
   return (
     <section className="py-20 sm:py-24 bg-white" id="featured-products">
       <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
           <span className="text-[#0284c7] text-xs sm:text-sm font-bold uppercase tracking-wider mb-2 block">
             Featured Collection
@@ -40,7 +34,6 @@ const BrandSelection: React.FC<BrandSelectionProps> = ({ onNavigate, onSelectPro
           </p>
         </div>
 
-        {/* Product Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
           {featuredProducts.map((product) => (
             <div
@@ -48,7 +41,6 @@ const BrandSelection: React.FC<BrandSelectionProps> = ({ onNavigate, onSelectPro
               onClick={() => onSelectProduct?.(product.id)}
               className="group relative flex flex-col bg-white rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_36px_-8px_rgba(2,132,199,0.16)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden"
             >
-              {/* Product Image Box */}
               <div className="w-full aspect-square bg-[#f8fafc] rounded-xl overflow-hidden flex items-center justify-center p-4 mb-4 relative">
                 <img
                   src={product.image}
@@ -61,7 +53,6 @@ const BrandSelection: React.FC<BrandSelectionProps> = ({ onNavigate, onSelectPro
                 </span>
               </div>
 
-              {/* Title & Price */}
               <div className="flex flex-col flex-1 justify-between">
                 <div>
                   <h3 className="text-[14px] sm:text-[15px] font-bold text-gray-900 leading-snug line-clamp-2 min-h-[42px] mb-2 group-hover:text-[#0284c7] transition-colors">
@@ -86,7 +77,6 @@ const BrandSelection: React.FC<BrandSelectionProps> = ({ onNavigate, onSelectPro
           ))}
         </div>
 
-        {/* View All Button */}
         <div className="text-center mt-12 sm:mt-16">
           <button
             type="button"

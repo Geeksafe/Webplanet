@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useCart } from './CartContext';
 
 const FloatingCart: React.FC = () => {
@@ -6,7 +6,6 @@ const FloatingCart: React.FC = () => {
 
   return (
     <div className="fixed right-5 sm:right-6 bottom-24 sm:bottom-28 z-40 flex flex-col items-center gap-3">
-      {/* Floating Cart Button */}
       <button 
         type="button"
         onClick={openCart}

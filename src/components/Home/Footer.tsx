@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { NavPage } from '../../types/navigation';
 
 interface FooterProps {
@@ -10,12 +10,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     <footer className="bg-[#48596e] text-white pt-16 pb-6">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-          {/* 1. Quick Links */}
           <div>
             <h4 className="text-base font-bold mb-5 tracking-tight">Quick Links</h4>
             <ul className="list-none space-y-2.5 p-0 m-0">
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('home')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -24,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('shop')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -33,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('about')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -60,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   type="button"
                   onClick={() => onNavigate?.('contact')}
                   className="text-[13px] text-[#dcdcdc] transition-colors duration-300 hover:text-white bg-transparent border-none p-0 cursor-pointer text-left"
@@ -71,7 +70,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* 2. Legal */}
           <div>
             <h4 className="text-base font-bold mb-5 tracking-tight">Legal</h4>
             <ul className="list-none space-y-2.5 p-0 m-0">
@@ -132,7 +130,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* 3. Contact Us */}
           <div>
             <h4 className="text-base font-bold mb-5 tracking-tight">Contact Us</h4>
             <div className="space-y-2 text-[13px] text-[#dcdcdc] leading-relaxed">
@@ -140,8 +137,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <p>3545 Ellicott Mills DR, Ellicott City MD 21043, USA</p>
               <p>
                 Toll Free:{' '}
-                <a href="tel:1-833-785-8085" className="text-white hover:text-sky-300 transition-colors font-semibold">
-                  1-833-785-8085
+                <a href="tel:1-844-883-0609" className="text-white hover:text-sky-300 transition-colors font-semibold">
+                  1-844-883-0609
                 </a>
               </p>
               <p>
@@ -155,7 +152,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Corporate Details & Disclaimer Strip */}
         <div className="border-t border-[rgba(255,255,255,0.12)] pt-6 mt-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[11px] font-bold text-[#b0c4de] uppercase tracking-wider mb-3 gap-2 text-center sm:text-left">
             <span>BUSINESS NAME: Pixfix Digital</span>

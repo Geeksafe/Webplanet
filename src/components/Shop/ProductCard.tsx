@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { Product } from './types';
 
 interface ProductCardProps {
@@ -12,7 +12,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProduct }) =
       onClick={() => onSelectProduct?.(product.id)}
       className="group flex flex-col bg-white rounded-lg p-3 sm:p-4 transition-all duration-200 hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] border border-transparent hover:border-gray-100 cursor-pointer"
     >
-      {/* Product Image */}
       <div className="w-full aspect-square bg-[#fcfcfd] rounded-md overflow-hidden flex items-center justify-center p-3 mb-3">
         <img 
           src={product.image} 
@@ -22,7 +21,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onSelectProduct }) =
         />
       </div>
 
-      {/* Product Info */}
       <div className="flex flex-col flex-1">
         <h3 className="text-[14px] sm:text-[14.5px] font-bold text-gray-900 leading-snug line-clamp-2 min-h-[40px] mb-1 group-hover:text-[#0284c7] transition-colors">
           {product.title}

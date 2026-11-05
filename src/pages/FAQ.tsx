@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import {
   HelpCircle,
   Search,
@@ -65,7 +65,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Orders & Shipping',
     question: 'How can I check my printer order and shipping status?',
     answer:
-      'Direct carrier tracking links from FedEx, UPS, or USPS are emailed automatically as soon as your printer is dispatched from our warehouse. You can also reach our customer support desk at 1-833-785-8085 or email support@geeksafeglobal.com with your order number for an immediate status update.',
+      'Direct carrier tracking links from FedEx, UPS, or USPS are emailed automatically as soon as your printer is dispatched from our warehouse. You can also reach our customer support desk at 1-844-883-0609 or email support@geeksafeglobal.com with your order number for an immediate status update.',
   },
   {
     id: 'orders-timeline',
@@ -73,7 +73,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Orders & Shipping',
     question: 'What are your delivery times and shipping rates?',
     answer:
-      'Orders placed before 2:00 PM EST on business days are processed within 24–48 hours. Standard Ground shipping takes 3–5 business days and is FREE on all orders over $50 ($9.95 flat rate otherwise). Expedited 2-day delivery is also available at checkout.',
+      'Orders placed before 2:00 PM EST on business days are processed within 24-48 hours. Standard Ground shipping takes 3-5 business days and is FREE on all orders over $50 ($9.95 flat rate otherwise). Expedited 2-day delivery is also available at checkout.',
   },
   {
     id: 'orders-change',
@@ -81,7 +81,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Orders & Shipping',
     question: 'Can I modify or cancel my order after it has been placed?',
     answer:
-      'If your order has not yet been processed by our warehouse, we can assist with address updates or cancellations. Please call our Toll Free support line at 1-833-785-8085 immediately with your order number.',
+      'If your order has not yet been processed by our warehouse, we can assist with address updates or cancellations. Please call our Toll Free support line at 1-844-883-0609 immediately with your order number.',
   },
 
   // Returns & Refunds
@@ -99,7 +99,7 @@ const FAQ_DATA: FAQItem[] = [
     categoryLabel: 'Returns & Refunds',
     question: 'How long does it take to receive my refund?',
     answer:
-      'Once our returns department in Ellicott City, MD inspects the returned merchandise (within 48 hours of arrival), your refund is issued directly to your original payment method. Funds generally appear in your account within 5–7 business days.',
+      'Once our returns department in Ellicott City, MD inspects the returned merchandise (within 48 hours of arrival), your refund is issued directly to your original payment method. Funds generally appear in your account within 5-7 business days.',
   },
   {
     id: 'returns-ink',
@@ -123,7 +123,7 @@ const FAQ_DATA: FAQItem[] = [
     id: 'warranty-independent',
     category: 'warranty',
     categoryLabel: 'Warranty & Support',
-    question: 'What is Pixfix Digital’s relationship with HP, Canon, Brother, and Epson?',
+    question: "What is Pixfix Digital's relationship with HP, Canon, Brother, and Epson?",
     answer:
       'Pixfix Digital operates as an independent service provider and retailer for printers and accessories. All brand names, logos, and trademarks mentioned are used purely for identification and compatibility reference and remain the property of their respective owners.',
   },
@@ -157,7 +157,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
       <Header onNavigate={onNavigate} currentPage={'faq' as any} />
 
       <main className="flex-1 w-full">
-        {/* Hero Banner */}
         <LegalHero
           tag="Help Center & Knowledge Base"
           titleWhite="Frequently Asked"
@@ -171,7 +170,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
         />
 
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 -mt-8 relative z-20 pb-16">
-          {/* Dual Overview Cards */}
           <LegalDualOverview
             cardLeft={{
               icon: <Sparkles className="w-5 h-5" />,
@@ -185,13 +183,11 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
               tag: "One-on-One Assistance",
               title: "Dedicated Help Desk",
               description:
-                "Need personal guidance? Our Maryland-based customer care center is open Monday through Friday, 9:00 AM to 5:00 PM EST via Toll Free 1-833-785-8085.",
+                "Need personal guidance? Our Maryland-based customer care center is open Monday through Friday, 9:00 AM to 5:00 PM EST via Toll Free 1-844-883-0609.",
             }}
           />
 
-          {/* Search & Filter Controls */}
           <div className="bg-white rounded-2xl p-5 sm:p-7 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] mb-8">
-            {/* Search Input */}
             <div className="relative mb-5">
               <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
@@ -212,7 +208,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
               )}
             </div>
 
-            {/* Category Filter Pills */}
             <div className="flex flex-wrap items-center gap-2">
               {[
                 { id: 'all', label: 'All Questions', icon: <HelpCircle className="w-3.5 h-3.5" /> },
@@ -225,11 +220,10 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
                   key={cat.id}
                   type="button"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-[13px] font-semibold transition-all cursor-pointer border ${
-                    activeCategory === cat.id
+                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-[13px] font-semibold transition-all cursor-pointer border ${activeCategory === cat.id
                       ? 'bg-[#0284c7] text-white border-[#0284c7] shadow-xs'
                       : 'bg-slate-50 text-gray-600 hover:text-gray-900 border-slate-200/80 hover:bg-slate-100'
-                  }`}
+                    }`}
                 >
                   {cat.icon}
                   <span>{cat.label}</span>
@@ -238,7 +232,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* FAQ Accordion List */}
           <div className="space-y-3.5 mb-12">
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq) => {
@@ -246,11 +239,10 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
                 return (
                   <div
                     key={faq.id}
-                    className={`rounded-2xl transition-all border ${
-                      isOpen
+                    className={`rounded-2xl transition-all border ${isOpen
                         ? 'bg-white border-sky-200 shadow-[0_4px_24px_-6px_rgba(2,132,199,0.12)]'
                         : 'bg-white border-slate-200/80 hover:border-slate-300 shadow-xs'
-                    }`}
+                      }`}
                   >
                     <button
                       type="button"
@@ -266,11 +258,10 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
                         </h2>
                       </div>
                       <div
-                        className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                          isOpen
+                        className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 ${isOpen
                             ? 'bg-sky-50 text-[#0284c7] rotate-180'
                             : 'bg-slate-100 text-gray-400'
-                        }`}
+                          }`}
                       >
                         <ChevronDown className="w-4 h-4" />
                       </div>
@@ -305,7 +296,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             )}
           </div>
 
-          {/* Quick Action Navigation Strip */}
           <div className="bg-gradient-to-r from-sky-50 to-blue-50/70 rounded-2xl p-6 sm:p-8 border border-sky-100 flex flex-col md:flex-row items-center justify-between gap-5 mb-12">
             <div>
               <span className="text-xs font-bold text-sky-600 uppercase tracking-wider block mb-1">
@@ -339,7 +329,6 @@ const FAQ: React.FC<FAQProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Box with Footer Info */}
           <LegalContactBox
             title="Didn't Find Your Answer?"
             description="Our printer specialists are ready to walk you through setup diagnostics, order questions, or parts verification."

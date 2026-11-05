@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 import { sendEmail } from '../../services/emailService';
 
@@ -79,7 +79,6 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
             </div>
           )}
 
-          {/* Anti-spam honeypot */}
           <input
             type="checkbox"
             name="botcheck"
@@ -88,7 +87,6 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
             tabIndex={-1}
             autoComplete="off"
           />
-          {/* Name field */}
           <div>
             <label htmlFor="setup-name" className="block text-[13.5px] text-gray-700 font-medium mb-1.5">
               Name
@@ -104,7 +102,6 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
             />
           </div>
 
-          {/* Email field */}
           <div>
             <label htmlFor="setup-email" className="block text-[13.5px] text-gray-700 font-medium mb-1.5">
               Email
@@ -120,7 +117,6 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
             />
           </div>
 
-          {/* Message field */}
           <div>
             <label htmlFor="setup-message" className="block text-[13.5px] text-gray-700 font-medium mb-1.5">
               Message
@@ -135,7 +131,6 @@ const SetupSupportForm: React.FC<SetupSupportFormProps> = ({ brandName }) => {
             />
           </div>
 
-          {/* Submit SEND button */}
           <button
             type="submit"
             disabled={submitting}

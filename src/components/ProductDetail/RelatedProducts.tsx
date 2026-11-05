@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { Product } from '../Shop/types';
 
 interface RelatedProductsProps {
@@ -22,7 +22,6 @@ const RelatedProducts: React.FC<RelatedProductsProps> = ({ products, onSelectPro
             onClick={() => onSelectProduct(product.id)}
             className="group flex flex-col bg-white rounded-lg p-3 sm:p-4 border border-transparent hover:border-gray-200 hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] transition-all cursor-pointer"
           >
-            {/* Image */}
             <div className="w-full aspect-square bg-[#fcfcfd] rounded-md overflow-hidden flex items-center justify-center p-4 mb-3 border border-gray-100">
               <img
                 src={product.image}
@@ -31,7 +30,6 @@ const RelatedProducts: React.FC<RelatedProductsProps> = ({ products, onSelectPro
               />
             </div>
 
-            {/* Info */}
             <div className="flex flex-col flex-1">
               <h3 className="text-[14px] font-bold text-gray-900 leading-snug line-clamp-2 min-h-[38px] mb-1 group-hover:text-[#0284c7] transition-colors">
                 {product.title}

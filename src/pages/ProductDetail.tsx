@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+﻿import React, { useMemo } from 'react';
 import Header from '../components/auth/Header';
 import Footer from '../components/Home/Footer';
 import FloatingCart from '../components/Cart/FloatingCart';
@@ -19,7 +19,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
   onNavigate,
   onSelectProduct,
 }) => {
-  // Fetch product details dynamically (mocked locally, ready for future API replacement)
   const product = useMemo(() => getProductDetailById(productId), [productId]);
   const relatedProducts = useMemo(() => getRelatedProducts(productId, 3), [productId]);
 
@@ -30,10 +29,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
 
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans text-gray-800">
-      {/* 1. TOPBAR */}
       <Header onNavigate={onNavigate} currentPage="shop" />
 
-      {/* 2. OPTIONAL COUPON ALERT NOTIFICATION (as in Image 2 & 3) */}
       {product.couponAlert && (
         <div className="w-full bg-[#fdf2f2] border-t-2 border-b border-[#e02424]/30 py-2.5 px-4">
           <div className="max-w-[1400px] mx-auto flex items-center gap-2.5 text-[13px] text-[#9b1c1c]">
@@ -47,9 +44,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
         </div>
       )}
 
-      {/* 3. MAIN PRODUCT DETAIL CONTAINER */}
       <main className="flex-1 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        {/* Breadcrumb */}
         <nav className="text-[13px] text-gray-400 mb-6 flex flex-wrap items-center gap-1.5 font-normal">
           <button 
             onClick={() => onNavigate('home')} 
@@ -70,33 +65,26 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
           </span>
         </nav>
 
-        {/* 2-Column Product Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-          {/* Left: Gallery */}
           <ProductGallery images={product.gallery} title={product.title} />
 
-          {/* Right: Overview & Purchase Controls */}
           <ProductOverview product={product} onNavigate={onNavigate} />
         </div>
 
-        {/* 4. TABS & SPECIFICATIONS TABLE */}
         <ProductSpecsTable
           productId={product.id}
           specifications={product.specifications}
           productTitle={product.title}
         />
 
-        {/* 5. RELATED PRODUCTS */}
         <RelatedProducts
           products={relatedProducts}
           onSelectProduct={handleSelectRelated}
         />
       </main>
 
-      {/* 6. FLOATING CART */}
       <FloatingCart />
 
-      {/* 7. FOOTER */}
       <Footer onNavigate={onNavigate} />
     </div>
   );

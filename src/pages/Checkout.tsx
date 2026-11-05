@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import Header from '../components/auth/Header';
 import Footer from '../components/Home/Footer';
 import FloatingCart from '../components/Cart/FloatingCart';
@@ -93,7 +93,7 @@ const Checkout: React.FC<CheckoutProps> = ({ onNavigate }) => {
 
     const itemsSummary = items
       .map(
-        (i) => `• ${i.title} × ${i.quantity} — $${(i.price * i.quantity).toFixed(2)}`
+        (i) => `- ${i.title} × ${i.quantity} -  $${(i.price * i.quantity).toFixed(2)}`
       )
       .join('\n');
 
@@ -129,7 +129,7 @@ ${formData.orderNotes.trim() || 'None provided'}
       name: `${formData.firstName} ${formData.lastName}`.trim(),
       email: formData.email,
       phone: formData.phone,
-      subject: `🛒 New Cash on Delivery Order - ${orderId} ($${total.toFixed(2)})`,
+      subject: `New Cash on Delivery Order - ${orderId} ($${total.toFixed(2)})`,
       message: emailMessage,
       order_id: orderId,
       customer_name: `${formData.firstName} ${formData.lastName}`.trim(),
@@ -167,13 +167,10 @@ ${formData.orderNotes.trim() || 'None provided'}
 
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans text-gray-800">
-      {/* 1. Header */}
       <Header onNavigate={onNavigate} currentPage="checkout" />
 
-      {/* 2. Main Checkout Section */}
       <main className="flex-1 w-full bg-[#fcfcfc] py-8 sm:py-12 border-t border-gray-100">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
-          {/* Breadcrumb / Back Navigation */}
           <div className="mb-6 flex items-center gap-2 text-xs sm:text-sm text-gray-500">
             <button
               type="button"
@@ -187,7 +184,6 @@ ${formData.orderNotes.trim() || 'None provided'}
             <span className="font-semibold text-gray-900">Checkout</span>
           </div>
 
-          {/* STATE A: ORDER SUCCESS RECEIPT */}
           {orderSuccess ? (
             <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200/80 p-6 sm:p-10 text-center animate-fadeIn">
               <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -200,7 +196,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                 Thank you, <strong className="text-gray-800">{orderSuccess.customerName}</strong>! We have received your order details.
               </p>
 
-              {/* Order Details Card */}
               <div className="bg-[#f8fafc] border border-gray-200/80 rounded-lg p-5 sm:p-6 text-left mb-6 text-xs sm:text-sm space-y-3">
                 <div className="flex justify-between items-center pb-3 border-b border-gray-200">
                   <span className="text-gray-500 font-medium">Order Number:</span>
@@ -226,7 +221,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                 </div>
               </div>
 
-              {/* Items List */}
               <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-5 text-left mb-8">
                 <h4 className="text-xs uppercase font-bold text-gray-500 tracking-wider mb-3">
                   Ordered Items
@@ -263,7 +257,6 @@ ${formData.orderNotes.trim() || 'None provided'}
               </div>
             </div>
           ) : items.length === 0 ? (
-            /* STATE B: EMPTY CART NOTICE */
             <div className="max-w-md mx-auto bg-white rounded-xl shadow-sm border border-gray-200 p-10 text-center">
               <div className="w-14 h-14 bg-gray-100 text-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ShoppingBag className="w-7 h-7" />
@@ -281,7 +274,6 @@ ${formData.orderNotes.trim() || 'None provided'}
               </button>
             </div>
           ) : (
-            /* STATE C: TWO-COLUMN CHECKOUT FORM */
             <form onSubmit={handlePlaceOrder}>
               {errorMessage && (
                 <div className="mb-6 flex items-start gap-3 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-xs sm:text-sm">
@@ -293,7 +285,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                 </div>
               )}
 
-              {/* Honeypot field for anti-spam */}
               <input
                 type="checkbox"
                 name="botcheck"
@@ -304,14 +295,12 @@ ${formData.orderNotes.trim() || 'None provided'}
               />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                {/* Left Column: Billing details & Additional information */}
                 <div className="lg:col-span-7 bg-white border border-gray-200/80 rounded-lg p-6 sm:p-8 shadow-2xs">
                   <h2 className="text-[22px] sm:text-[24px] font-bold text-gray-900 mb-6 tracking-tight">
                     Billing details
                   </h2>
 
                   <div className="space-y-4 text-left">
-                    {/* First name & Last name */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
@@ -341,7 +330,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       </div>
                     </div>
 
-                    {/* Company name */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         Company name (optional)
@@ -355,7 +343,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       />
                     </div>
 
-                    {/* Country / Region */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         Country / Region <span className="text-red-500">*</span>
@@ -374,7 +361,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       </select>
                     </div>
 
-                    {/* Street address */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         Street address <span className="text-red-500">*</span>
@@ -398,7 +384,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       />
                     </div>
 
-                    {/* Town / City */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         Town / City <span className="text-red-500">*</span>
@@ -413,7 +398,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       />
                     </div>
 
-                    {/* State */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         State <span className="text-red-500">*</span>
@@ -433,7 +417,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       </select>
                     </div>
 
-                    {/* ZIP Code */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         ZIP Code <span className="text-red-500">*</span>
@@ -448,7 +431,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       />
                     </div>
 
-                    {/* Phone */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         Phone <span className="text-red-500">*</span>
@@ -463,7 +445,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       />
                     </div>
 
-                    {/* Email address */}
                     <div>
                       <label className="block text-[13.5px] font-medium text-gray-700 mb-1.5">
                         Email address <span className="text-red-500">*</span>
@@ -479,7 +460,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                     </div>
                   </div>
 
-                  {/* Additional Information Section */}
                   <div className="mt-8 pt-6 border-t border-gray-100 text-left">
                     <h3 className="text-[18px] sm:text-[20px] font-bold text-gray-900 mb-4 tracking-tight">
                       Additional information
@@ -500,13 +480,11 @@ ${formData.orderNotes.trim() || 'None provided'}
                   </div>
                 </div>
 
-                {/* Right Column: Your order card */}
                 <div className="lg:col-span-5 bg-white border border-gray-200/90 rounded-lg p-6 sm:p-7 shadow-2xs">
                   <h3 className="text-[20px] font-bold text-gray-900 mb-5 tracking-tight text-left">
                     Your order
                   </h3>
 
-                  {/* Order Table */}
                   <div className="border-b border-gray-200 pb-2 mb-4 text-xs sm:text-sm">
                     <div className="flex justify-between items-center text-gray-600 font-bold pb-2 border-b border-gray-200">
                       <span>Product</span>
@@ -529,7 +507,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       ))}
                     </div>
 
-                    {/* Subtotal Row */}
                     <div className="py-3 flex justify-between items-center border-t border-gray-100 text-[13.5px]">
                       <span className="text-gray-700 font-medium">Subtotal</span>
                       <span className="font-semibold text-gray-900">
@@ -537,7 +514,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                       </span>
                     </div>
 
-                    {/* Total Row */}
                     <div className="py-3 flex justify-between items-center border-t border-gray-200 text-[15px]">
                       <span className="font-bold text-gray-900">Total</span>
                       <span className="font-extrabold text-gray-900 text-[17px]">
@@ -546,7 +522,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                     </div>
                   </div>
 
-                  {/* Payment Method - Only Cash on Delivery */}
                   <div className="text-left pt-2 pb-5 border-b border-gray-100">
                     <label className="flex items-center gap-2.5 cursor-pointer font-semibold text-gray-800 text-[14px]">
                       <input
@@ -560,13 +535,11 @@ ${formData.orderNotes.trim() || 'None provided'}
                       <span>Cash on delivery</span>
                     </label>
 
-                    {/* COD Description Box */}
                     <div className="mt-2.5 p-3.5 bg-gray-100/90 rounded text-[13px] text-gray-600 leading-relaxed border border-gray-200/50">
                       Pay with cash upon delivery.
                     </div>
                   </div>
 
-                  {/* Privacy Policy Note */}
                   <p className="text-[12px] text-gray-500 leading-relaxed text-left py-4 m-0">
                     Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our{' '}
                     <button
@@ -579,7 +552,6 @@ ${formData.orderNotes.trim() || 'None provided'}
                     .
                   </p>
 
-                  {/* PLACE ORDER Button */}
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -601,10 +573,8 @@ ${formData.orderNotes.trim() || 'None provided'}
         </div>
       </main>
 
-      {/* 3. Floating Cart */}
       <FloatingCart />
 
-      {/* 4. Footer */}
       <Footer onNavigate={onNavigate} />
     </div>
   );
